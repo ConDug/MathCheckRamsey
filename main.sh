@@ -22,7 +22,7 @@ Options:
 while getopts "p" opt
 do
     case $opt in
-        p) p="-p" ;;
+        d) d="-d" ;;
         *) echo "Invalid option: -$OPTARG. Only -p is supported. Use -h or --help for help" >&2
            exit 1 ;;
     esac
@@ -37,43 +37,51 @@ then
 fi
 
 n=$1 #order
-c=${2:-0.5}
-r=${3:-0} #num of var to eliminate during first cubing stage
-a=${4:-0} #amount of additional variables to remove for each cubing call
+p=${2}
+q=$3
+r=${4:-0} #num of var to eliminate during first cubing stage
+a=${5:-0} #amount of additional variables to remove for each cubing call
+lower=${6:-0}
+upper=${7:-0}
 
 #step 2: setp up dependencies
 ./dependency-setup.sh
- 
+module load python/3.10 
 #step 3 and 4: generate pre-processed instance
 
 dir="."
 
-if [ -f constraints_${n}_${c}.simp.log ]
+if [ -f constraints_${n}_${p}_${q}_${lower}_${upper}.simp.log ]
 then
     echo "Instance with these parameters has already been solved."
     exit 0
 fi
 
-./generate-instance.sh $n $c
+./generate-instance.sh $n $p $q $lower $upper
 
-if [ -f "$n.exhaust" ]
-then
-    rm $n.exhaust
-fi
+#if [ -f "$n.exhaust" ]
+#then
+#    rm $n.exhaust
+#fi
 
-if [ -f "embedability/$n.exhaust" ]
-then
-    rm embedability/$n.exhaust
-fi
+#if [ -f "embedability/$n.exhaust" ]
+#then
+#    rm embedability/$n.exhaust
+#fi
 
 echo "Simplifying constraints_${n}_${c} for 10000 conflicts using CaDiCaL+CAS"
-./simplification/simplify-by-conflicts.sh constraints_${n}_${c} $n 10000
+./simplification/simplify-by-conflicts.sh constraints_${n}_${p}_${q}_${lower}_${upper} $n 10000
 
 if [ "$r" != "0" ] 
 then
-    dir="${n}_${r}_${a}"
-    ./cube-solve.sh $p $n constraints_${n}_${c}.simp $dir $r $a
+    if [" $upper" -gt 0 ]
+    then
+        dir="${n}_${p}_${q}_${r}_${a}_degs"
+    else
+        dir="${n}_${p}_${q}_${r}_${a}"
+    fi
+    ./cube-solve.sh $p $n constraints_${n}_${p}_${q}_${lower}_${upper}.simp $dir $r $a
 else
-    echo "Solving constraints_${n}_${c}.simp using MapleSAT+CAS"
-    ./maplesat-solve-verify.sh $n constraints_${n}_${c}.simp
+    echo "Solving constraints_${n}_${p}_${q}_${lower}_${upper}.simp using MapleSAT+CAS"
+    ./maplesat-solve-verify.sh $n constraints_${n}_${p}_${q}_${lower}_${upper}.simp
 fi

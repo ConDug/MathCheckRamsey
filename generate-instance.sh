@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ "$1" = "-h" -o "$1" = "--help" -o "$#" -lt 1 -o "$#" -gt 2 ] && echo "
+[ "$1" = "-h" -o "$1" = "--help" -o "$#" -lt 4 ] && echo "
 Description:
     Updated on 2023-01-11
     This script call the python file generate.py in gen_instance to generate the SAT encoding for a Kochen Specker candidates. Such candidate satisfies the following condition:
@@ -19,11 +19,13 @@ Options:
 " && exit
 
 n=$1 #order
-c=${2:-0.5} #ratio of color-1 vertices to block
-
-if [ -f constraints_$n_$c ]
+p=${2} 
+q=$3
+lower=$4
+upper=$5
+if [ -f constraints_${n}_${p}_${q}_${lower}_${upper} ]
 then
     echo "instance already generated"
 else
-    python3 gen_instance/generate.py $n $c #generate the instance of order n
+    python3 gen_instance/generate.py $n $p $q $lower $upper #generate the instance of order n
 fi

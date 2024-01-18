@@ -1,58 +1,52 @@
-#!/usr/bin/python
-import sys, getopt
-from squarefree import squarefree
-from triangle import triangle
-from mindegree import mindegree
-from noncolorable import noncolorable
+import sys
+import itertools
 from cubic import cubic
+import math
+import csv
 import subprocess
-import os
+from degree_constraints import generate_degree_clauses
 
-def generate(n, block):
-    """
-    n: size of the graph
-    Given n, the function calls each individual constraint-generating function, then write them into a DIMACS file as output
-    The variables are listed in the following order:
-    edges - n choose 2 variables
-    triangles - n choose 3 variables
-    extra variables from cubic
-    """
-    cnf_file = "constraints_" + str(n) + "_" + str(block)
-    if os.path.exists(cnf_file):
-        print(f"File '{cnf_file}' already exists. Terminating...")
-        sys.exit()
-    edge_dict = {}
-    tri_dict = {}
-    count = 0
-    clause_count = 0
+#requires that the cnf file does not exist
+def generate(n, p, q,lower=0,upper=0):
+
+    vertices=range(1,n+1)
+    edge_dict={}
+    edge_counter=0
+
     for j in range(1, n+1):             #generating the edge variables
         for i in range(1, j):
-            count += 1
-            edge_dict[(i,j)] = count
-    for a in range(1, n-1):             #generating the triangle variables
-        for b in range(a+1, n):
-            for c in range(b+1, n+1):
-                count += 1
-                tri_dict[(a,b,c)] = count
-    clause_count += squarefree(n, edge_dict, cnf_file)
-    print ("graph is squarefree")
-    clause_count += triangle(n, edge_dict, tri_dict, cnf_file)
-    print ("all vertices are part of a triangle")
-    clause_count += noncolorable(n,  edge_dict, tri_dict, cnf_file, block)
-    print ("graph is noncolorable")
-    clause_count += mindegree(n, 3, edge_dict, cnf_file)
-    print ("minimum degree of each vertex is 3")
-    """
-    conway(n, edge_dict, tri_dict, 1, 3)
-    conway(n, edge_dict, tri_dict, 2, 4)
-    conway(n, edge_dict, tri_dict, 3, 4)
-    print ("conway constraint")
-    """
-    var_count, c_count = cubic(n, count, cnf_file) #total number of variables
-    clause_count += c_count
-    print ("isomorphism blocking applied")
-    firstline = 'p cnf ' + str(var_count) + ' ' + str(clause_count)
-    subprocess.call(["./gen_instance/append.sh", cnf_file, cnf_file+"_new", firstline])
+            edge_counter += 1
+            edge_dict[(i,j)] = edge_counter
+
+    for clique in itertools.combinations(vertices,p):
+        constraint=""
+        for j in itertools.combinations(clique,2):
+            constraint+=str(-edge_dict[j])+" "
+        with open(f"./constraints_temp_{n}_{p}_{q}", 'a') as f: #p-cliques
+            f.write(constraint + "0" + "\n")
+
+    for clique in itertools.combinations(vertices,q):
+        constraint=""
+        for j in itertools.combinations(clique,2):
+            constraint+=str(edge_dict[j])+" "
+        with open(f"./constraints_temp_{n}_{p}_{q}", 'a') as f: #q-cliques
+           f.write(constraint + "0" + "\n")
+
+
+    count,clause_count= cubic(n, math.comb(n,2),f"constraints_temp_{n}_{p}_{q}") # write cubic constraints to file and count their total variables, and num_cubic constriants
+    #clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
+    
+    if lower>0:
+        for i in range(1,n+1):
+            deg_count,deg_clause=generate_degree_clauses([edge_dict[key] for key in edge_dict if i in key],lower,upper,count,f"constraints_temp_{n}_{p}_{q}")
+            print(deg_count)
+            clause_count +=deg_clause
+            count=deg_count #+= built into generate_degree_clauses
+
+    count=str(count)
+    clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
+    proc1=subprocess.Popen(["./gen_instance/combine.sh",str(n), str(p), str(q), str(lower), str(upper), count, clause_count]) # call a bash file to combine cubic constraints and 1st line of cnf file
+    proc1.wait()
 
 if __name__ == "__main__":
-   generate(int(sys.argv[1]), sys.argv[2])
+    generate(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]),int(sys.argv[4]),int(sys.argv[5]))
