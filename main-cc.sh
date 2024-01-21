@@ -12,7 +12,7 @@ Usage:
     If only parameter n is provided, default run ./main.sh n 0 0
 
 Options:
-    [-p]: cubing/solving in parallel
+    [-d]: cubing/solving in parallel
     <n>: the order of the instance/number of vertices in the graph
     <r>: number of variable to remove in cubing, if not passed in, assuming no cubing needed
     <a>: amount of additional variables to remove for each cubing call
@@ -26,31 +26,33 @@ then
 fi
 
 n=$1 #order
-c=${2:-0.5}
-r=${3:-0} #num of var to eliminate during first cubing stage
-a=${4:-0} #amount of additional variables to remove for each cubing call
-nodes=${5:-1} #number of nodes to use
-
+p=${2}
+q=$3
+r=${4:-0} #num of cubes to generate first cubing stage
+a=${5:-0} #amount of cubes to generate in each proceeding cubing stage
+nodes=${6:-1} #number of nodes to use
+lower=${7:-0}
+upper=${8:-0}
 #step 2: setp up dependencies
 ./dependency-setup.sh
- 
+
 #step 3 and 4: generate pre-processed instance
 
 dir="."
 
-if [ -f constraints_${n}_${r}_${a}_final.simp.log ]
+if [ -f constraints_${n}_${p}_${q}_${lower}_${upper}_${r}_${a}_final.simp.log ]
 then
     echo "Instance with these parameters has already been solved."
     exit 0
 fi
 
-./generate-instance.sh $n $c
+./generate-instance.sh $n $p $q $lower $upper
 
 if [ "$r" != "0" ] 
 then
-    dir="${n}_${r}_${a}"
-    ./generate-instance.sh $n 0
-    ./cube-solve-cc.sh $n constraints_${n}_${c} $dir $r $a constraints_${n}_0 $nodes
+    dir="${n}_${p}_${q}_${lower}_${upper}_${r}_${a}"
+    #./generate-instance.sh $n 0
+    ./cube-solve-cc.sh $n constraints_${n}_${p}_${q}_${lower}_${upper} $dir $r $a constraints_${n}_${p}_${q}_${lower}_${upper} $nodes
 else
-    ./solve-verify.sh $n constraints_${n}_${c}.simp
+    ./solve-verify.sh $n constraints_${n}_${p}_${q}_${lower}_${upper}_${r}_${a}.simp
 fi

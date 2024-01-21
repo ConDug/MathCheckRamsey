@@ -23,12 +23,12 @@ else
     echo "networkx version $installed_version is already installed and newer than $required_version"
 fi
 
-if pip3 list | grep z3-solver
-then
-    echo "z3-solver package installed"
-else 
-    pip3 install z3-solver
-fi
+#if pip3 list | grep z3-solver
+#then
+#    echo "z3-solver package installed"
+#else 
+#    pip3 install z3-solver
+#fi
 
 if [ -f gen_cubes/march_cu/march_cu ]
 then

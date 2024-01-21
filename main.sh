@@ -46,7 +46,6 @@ upper=${7:-0}
 
 #step 2: setp up dependencies
 ./dependency-setup.sh
-module load python/3.10 
 #step 3 and 4: generate pre-processed instance
 
 dir="."
@@ -69,7 +68,7 @@ fi
 #    rm embedability/$n.exhaust
 #fi
 
-echo "Simplifying constraints_${n}_${c} for 10000 conflicts using CaDiCaL+CAS"
+echo "Simplifying constraints_${n}_${p}_${q}_${lower}_${upper} for 10000 conflicts using CaDiCaL+CAS"
 ./simplification/simplify-by-conflicts.sh constraints_${n}_${p}_${q}_${lower}_${upper} $n 10000
 
 if [ "$r" != "0" ] 
@@ -80,6 +79,7 @@ then
     else
         dir="${n}_${p}_${q}_${r}_${a}"
     fi
+    echo "Starting cubing" dir
     ./cube-solve.sh $p $n constraints_${n}_${p}_${q}_${lower}_${upper}.simp $dir $r $a
 else
     echo "Solving constraints_${n}_${p}_${q}_${lower}_${upper}.simp using MapleSAT+CAS"
