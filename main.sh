@@ -91,7 +91,7 @@ cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
 
 #step 3 and 4: generate pre-processed instance
 
-if [ -f ${cnf}_${r}_${a}_final.simp.log ]
+if [ -f ${cnf}_${t}_${m}_${d}_${dv}_${nodes}_final.simp.log ]
 then
     echo "Instance with these parameters has already been solved."
     exit 0
@@ -100,24 +100,24 @@ fi
 if [ -f ${cnf} ]
 then
     echo "instance already generated"
-    cp ${cnf} ${cnf}_${t}_${r}_${a}
+    cp ${cnf} ${cnf}_${t}_${t}_${m}_${d}_${dv}_${nodes}
 else
     #echo $n $p $q $lower $upper $Edge_b $Edge_r
     python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
     cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
 fi
 
-cp $cnf_${t}_${m}_${d}_${dv}_${nodes} $di
+cp ${cnf}_${t}_${m}_${d}_${dv}_${nodes} $di
 # Solve Based on Mode
 case $solve_mode in
     "no_cubing")
         echo "No cubing, just solve"
         
-        echo "Simplifying $f for 10000 conflicts using CaDiCaL+CAS"
-        ./simplification/simplify-by-conflicts.sh ${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes} $n $t
+        echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
+        ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
 
         echo "Solving $f using MapleSAT+CAS"
-        ./solve-verify.sh $n ${di}/$cnf.simp
+        ./solve-verify.sh $n ${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes}.simp
         ;;
     "seq_cubing")
         echo "Cubing and solving in parallel on local machine"
