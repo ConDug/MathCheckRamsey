@@ -86,7 +86,7 @@ nodes=${8:-1} #Number of nodes to submit to if using -l
 #step 2: setp up dependencies
 ./dependency-setup.sh
 di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}"
-mkdir $di
+mkdir -p $di
 cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
 
 #step 3 and 4: generate pre-processed instance

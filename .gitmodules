@@ -2,3 +2,6 @@
 	path = alpha-zero-general
 	url = https://github.com/piyush-J/alpha-zero-general.git
 	branch = alphacube
+[submodule "cadical-ks"]
+	path = cadical-ks
+	url = https://github.com/curtisbright/cadical-ks
