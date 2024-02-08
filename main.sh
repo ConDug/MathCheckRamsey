@@ -1,16 +1,20 @@
 #!/bin/bash
+
 # Ensure parameters are specified on the command-line
 
 [ "$1" = "-h" -o "$1" = "--help" ] && echo "
 Description:
-    Updated on 2023-01-25
-    This is a driver script that handles generating the SAT encoding,  simplify instance using CaDiCaL, solve the instance using maplesat-ks.
+    Updated on 2023-12-19
+    This is a driver script that handles generating the SAT encoding, solve the instance using CaDiCaL, then finally determine if a KS system exists for a certain order.
 
 Usage:
-    ./main.sh [-p] [-m] [-d] [-D] [-E] [-F] n p q t s b r
-    If only parameter n,p,q are provided, default run ./main.sh n p q 100000 0 10
+    ./main.sh [-p] n r a
+    If only parameter n is provided, default run ./main.sh n 0 0
 
 Options:
+    -n: No cubing, just solve
+    -s: Cubing with sequential solving
+    -l: Cubing with parallel solving
     [-p]: cubing/solving in parallel
     [-d]: lower bound on number of (colour 1) edges
     [-D]: upper bound on number of (colour 1) edges
@@ -25,11 +29,12 @@ Options:
 " && exit
 
 
-while getopts "pmd:D:E:F:P" opt
+while getopts "nsld:D:E:F:P" opt
 do
     case $opt in
-        p) d="-p" ;;
-        m) m="-m" ;;
+        n) solve_mode="no_cubing" ;;
+        s) solve_mode="seq_cubing" ;;
+        l) solve_mode="par_cubing" ;;
         d) lower=${OPTARG} ;; #lower bound on degree of blue vertices
         D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
         E) Edge_b=${OPTARG} ;; #upper bound on blue triangles per blue edge
@@ -72,51 +77,96 @@ n=$1 #order
 p=$2
 q=$3
 t=${4:-100000} #conflicts for which to simplify each time CaDiCal is called, or % of variables to eliminate
-r=${5:-0} #num of var to eliminate during first cubing stage
-a=${6:-10} #amount of additional variables to remove for each cubing call
+m=${5:-2} #Num of MCTS simulations. m=0 activate march
+d=${6:-d} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
+dv=${7:-5} #By default cube to depth 5
+nodes=${8:-1} #Number of nodes to submit to if using -l
 
 
 #step 2: setp up dependencies
-dir="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${r}_${a}"
-cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
 ./dependency-setup.sh
- 
+di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}"
+mkdir $di
+cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
+cp $cnf $di
 #step 3 and 4: generate pre-processed instance
-dir="."
 
-if [ -f ${cnf}_${t}_${r}_${a}.simp.log ]
+if [ -f ${cnf}_${r}_${a}_final.simp.log ]
 then
     echo "Instance with these parameters has already been solved."
     exit 0
 fi
 
+python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
 
-if [ -f ${cnf} ]
-then
-    echo "instance already generated"
-    cp ${cnf} ${cnf}_${t}_${r}_${a}
-else
-    #echo $n $p $q $lower $upper $Edge_b $Edge_r
-    python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
-    cp ${cnf} ${cnf}_${t}_${r}_${a}
-fi
+# Solve Based on Mode
+case $solve_mode in
+    "no_cubing")
+        echo "No cubing, just solve"
+        
+        echo "Simplifying $f for 10000 conflicts using CaDiCaL+CAS"
+        ./simplification/simplify-by-conflicts.sh ${di}/$cnf $n $t
 
-echo "Simplifying ${cnf}_${t}_${r}_${a} for" $t "conflicts using CaDiCaL+CAS"
-./simplification/simplify-by-conflicts.sh ${cnf}_${t}_${r}_${a} $n $t
+        echo "Solving $f using MapleSAT+CAS"
+        ./solve-verify.sh $n ${di}/$cnf.simp
+        ;;
+    "seq_cubing")
+        echo "Cubing and solving in parallel on local machine"
+        python parallel-solve.py $n ${di}/$cnf $m $d $dv
+        ;;
+    "par_cubing")
+        echo "Cubing and solving in parallel on Compute Canada"
+        python parallel-solve.py $n ${di}/$cnf $m $d $dv False
+        found_files=()
 
-#need to fix the cubing part for directory pointer
-#step 5: cube and conquer if necessary, then solve
-if [ "$r" != "0" ]
-then
-    ./cube-solve.sh $p $n ${cnf}_${t}_${r}_${a}.simp $dir $r $a
-else
-    echo "Solving ${cnf}_${t}_${r}_${a}.simp using MapleSAT+CAS"
-    ./maplesat-solve-verify.sh $n ${cnf}_${t}_${r}_${a}.simp
-    #step 5.5: verify all constraints are satisfied
-    #./verify.sh $n
+        # Populate the array with the names of files found by the find command
+        while IFS= read -r -d $'\0' file; do
+        found_files+=("$file")
+        done < <(find . -regextype posix-extended -regex "./${di}/$cnf[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
 
-    #step 6: only relevant for SAT case
-    echo "checking max clique size..."
-    ./4-check-clique-size.sh $n $p $q
+        # Calculate the number of files to distribute names across and initialize counters
+        total_files=${#found_files[@]}
+        files_per_node=$(( (total_files + nodes - 1) / nodes )) # Ceiling division to evenly distribute
+        counter=0
+        file_counter=1
 
-fi
+        # Check if there are files to distribute
+        if [ ${#found_files[@]} -eq 0 ]; then
+            echo "No files found to distribute."
+            exit 1
+        fi
+
+        # Create $node number of files and distribute the names of found files across them
+        for file_name in "${found_files[@]}"; do
+            # Determine the current output file to write to
+            output_file="${di}/node_${file_counter}.txt"
+            submit_file="${di}/node_${file_counter}.sh"
+            cat <<EOF > "$submit_file"
+#!/bin/bash
+#SBATCH --account=def-vganesh
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
+#SBATCH --mem=0
+#SBATCH --time=1-00:00
+
+module load python/3.10
+
+python parallel-solve.py $n $output_file $m $d $dv
+
+EOF
+            
+            # Write the current file name to the output file
+            echo "$file_name" >> "$output_file"
+            
+            # Update counters
+            ((counter++))
+            if [ "$counter" -ge "$files_per_node" ]; then
+                counter=0
+                ((file_counter++))
+            fi
+        done
+
+
+        ;;
+esac

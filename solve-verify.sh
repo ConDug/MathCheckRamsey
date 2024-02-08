@@ -1,9 +1,9 @@
 #!/bin/bash
 
-while getopts "l" opt
+while getopts "s" opt
 do
 	case $opt in
-        l) l="-l" ;;
+        s) s="-s" ;;
 	esac
 done
 shift $((OPTIND-1))
@@ -22,7 +22,6 @@ Options:
     [-l]: generate learnt clauses
     <n>: the order of the instance/number of vertices in the graph
     <f>: file name of the CNF instance to be solved
-    <e>: file name to output exhaustive SAT solutions
 " && exit
 
 
@@ -37,3 +36,5 @@ if ! grep -q "UNSAT" "$f.log"; then
 else
         ./proof-module.sh $n $f $f.verify
 fi
+=======
+#remove verification for now for testing purposes
