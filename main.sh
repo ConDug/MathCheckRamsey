@@ -88,7 +88,7 @@ nodes=${8:-1} #Number of nodes to submit to if using -l
 di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}"
 mkdir $di
 cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
-cp $cnf $di
+
 #step 3 and 4: generate pre-processed instance
 
 if [ -f ${cnf}_${r}_${a}_final.simp.log ]
@@ -98,7 +98,7 @@ then
 fi
 
 python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
-
+cp $cnf $di
 # Solve Based on Mode
 case $solve_mode in
     "no_cubing")
