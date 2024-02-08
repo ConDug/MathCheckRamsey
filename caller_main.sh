@@ -5,11 +5,12 @@
 #SBATCH --nodes=1
 #SBATCH --constraint=broadwell
 
-while getopts "pmd:D:E:F:P" opt
+while getopts "nsld:D:E:F:P" opt
 do
     case $opt in
-        p) d="-p" ;;
-        m) m="-m" ;;
+        n) t1="-n" ;;
+        s) t1="-s"
+        l) t1="-l"
         d) lower=${OPTARG} ;; #lower bound on degree of blue vertices
         D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
         E) Edge_b=${OPTARG} ;; #upper bound on triangles per blue edge
@@ -50,4 +51,4 @@ r=${5:-0} #number of variables to eliminate until the cubing terminates
 a=${6:-10}
 
 module load python/3.10
-./main.sh $d "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $r $a $lower $upper
+./main.sh ${t1} $d "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $r $a $lower $upper
