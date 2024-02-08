@@ -47,8 +47,10 @@ n=$1 #order
 p=$2
 q=$3
 t=${4:-100000} #conflicts for which to simplify each time CaDiCal is called, or % of variables to eliminate
-r=${5:-0} #number of variables to eliminate until the cubing terminates
-a=${6:-10}
+m=${5:-2} #Num of MCTS simulations. m=0 activate march
+d=${6:-d} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
+dv=${7:-5} #By default cube to depth 5
+nodes=${8:-1} #Number of nodes to submit to if using -l
 
 module load python/3.10
-./main.sh ${t1} $d "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $r $a $lower $upper
+./main.sh ${t1} $d "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes
