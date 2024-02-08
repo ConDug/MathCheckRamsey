@@ -69,7 +69,7 @@ fi
 #fi
 
 echo "Simplifying constraints_${n}_${p}_${q}_${lower}_${upper} for 10000 conflicts using CaDiCaL+CAS"
-./simplification/simplify-by-conflicts.sh constraints_${n}_${p}_${q}_${lower}_${upper} $n 10000
+./simplification/simplify-by-conflicts.sh constraints_${n}_${p}_${q}_${lower}_${upper} $n 0
 
 if [ "$r" != "0" ] 
 then
