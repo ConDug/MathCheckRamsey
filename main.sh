@@ -97,32 +97,41 @@ then
     exit 0
 fi
 
-python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
-cp $cnf $di
+if [ -f ${cnf} ]
+then
+    echo "instance already generated"
+    cp ${cnf} ${cnf}_${t}_${r}_${a}
+else
+    #echo $n $p $q $lower $upper $Edge_b $Edge_r
+    python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
+    cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
+fi
+
+cp $cnf_${t}_${m}_${d}_${dv}_${nodes} $di
 # Solve Based on Mode
 case $solve_mode in
     "no_cubing")
         echo "No cubing, just solve"
         
         echo "Simplifying $f for 10000 conflicts using CaDiCaL+CAS"
-        ./simplification/simplify-by-conflicts.sh ${di}/$cnf $n $t
+        ./simplification/simplify-by-conflicts.sh ${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes} $n $t
 
         echo "Solving $f using MapleSAT+CAS"
         ./solve-verify.sh $n ${di}/$cnf.simp
         ;;
     "seq_cubing")
         echo "Cubing and solving in parallel on local machine"
-        python parallel-solve.py $n ${di}/$cnf $m $d $dv
+        python parallel-solve.py $n ${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv
         ;;
     "par_cubing")
         echo "Cubing and solving in parallel on Compute Canada"
-        python parallel-solve.py $n ${di}/$cnf $m $d $dv False
+        python parallel-solve.py $n ${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
 
         # Populate the array with the names of files found by the find command
         while IFS= read -r -d $'\0' file; do
         found_files+=("$file")
-        done < <(find . -regextype posix-extended -regex "./${di}/$cnf[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
+        done < <(find . -regextype posix-extended -regex "./${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes}[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
 
         # Calculate the number of files to distribute names across and initialize counters
         total_files=${#found_files[@]}
