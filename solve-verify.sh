@@ -36,5 +36,4 @@ if ! grep -q "UNSAT" "$f.log"; then
 else
         ./proof-module.sh $n $f $f.verify
 fi
-=======
 #remove verification for now for testing purposes

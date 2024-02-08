@@ -65,7 +65,7 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
             clause_count +=edge_clause
             count=edge_count #+= built into generate_degree_clauses
 
-    if mpcf:
+    if mpcf==0:
         mtf_count,mtf_clause=max_pclique_free(n,p,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
         clause_count+=mtf_clause
         count=mtf_count
@@ -75,7 +75,7 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
 
     count=str(count)
     clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
-
+    print(str(u_e_r), str(MPCF), count, clause_count)
     proc1=subprocess.Popen(["./gen_instance/combine.sh",str(n), str(p), str(q), str(lower), str(upper), str(u_e_b), str(u_e_r), str(MPCF), count, clause_count]) # call a bash file to combine cubic constraints and 1st line of cnf file
     proc1.wait()
 

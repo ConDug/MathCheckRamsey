@@ -9,8 +9,8 @@ while getopts "nsld:D:E:F:P" opt
 do
     case $opt in
         n) t1="-n" ;;
-        s) t1="-s"
-        l) t1="-l"
+        s) t1="-s" ;;
+        l) t1="-l" ;;
         d) lower=${OPTARG} ;; #lower bound on degree of blue vertices
         D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
         E) Edge_b=${OPTARG} ;; #upper bound on triangles per blue edge
@@ -38,10 +38,6 @@ if [[ ! -v Edge_r ]]; then
     Edge_r=0
 fi
 
-if [[ ! -v mpcf ]]; then
-    mpcf=0
-fi
-
 
 n=$1 #order
 p=$2
@@ -53,4 +49,6 @@ dv=${7:-5} #By default cube to depth 5
 nodes=${8:-1} #Number of nodes to submit to if using -l
 
 module load python/3.10
-./main.sh ${t1} $d "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes
+command='./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes'
+echo $command
+./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes

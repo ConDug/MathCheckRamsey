@@ -28,12 +28,11 @@ mkdir -p log simp
 
 f_dir=$f
 f_base=$(basename "$f")
-
+echo $f_dir $f_base
 # Simplify m seconds
 echo "simplifying for $m conflicts"
 i=1
-<<<<<<< HEAD
-./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o simp/"$f".simp1 -e simp/"$f".ext1 -n -c $m | tee log/"$f".simp1
+#./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o simp/"$f".simp1 -e simp/"$f".ext1 -n -c $m | tee log/"$f".simp1
 
 ./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o simp/"$f_base".simp1 -e simp/"$f_base".ext1 -n -c $m | tee log/"$f_base".simp1
 
