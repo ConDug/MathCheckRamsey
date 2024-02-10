@@ -73,6 +73,7 @@ then
     exit
 fi
 
+<<<<<<< HEAD
 n=$1 #order
 p=$2
 q=$3
@@ -163,6 +164,7 @@ case $solve_mode in
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=0
 #SBATCH --time=1-00:00
+#SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
 module load python/3.10
 
