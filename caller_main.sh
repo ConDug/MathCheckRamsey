@@ -49,6 +49,11 @@ dv=${7:-5} #By default cube to depth 5
 nodes=${8:-1} #Number of nodes to submit to if using -l
 
 module load python/3.10
-command='./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes'
-echo $command
+
+module load scipy-stack
+pip install tqdm --no-index
+pip install rl_coach
+pip install coloredlogs --no-index
+pip install wandb --no-index
+pip install argparse --no-index
 ./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes

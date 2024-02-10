@@ -100,7 +100,7 @@ fi
 if [ -f ${cnf} ]
 then
     echo "instance already generated"
-    cp ${cnf} ${cnf}_${t}_${t}_${m}_${d}_${dv}_${nodes}
+    cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
 else
     #echo $n $p $q $lower $upper $Edge_b $Edge_r
     python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
