@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH --account=def-vganesh
-#SBATCH --time=02:00:00
-#SBATCH --mem-per-cpu=4G
+#SBATCH --time=110:00:00
+#####SBATCH --mem-per-cpu=4G
 #SBATCH --nodes=1
+#SBATCH --mem=0
 #SBATCH --constraint=broadwell
 
 while getopts "nsld:D:E:F:P" opt

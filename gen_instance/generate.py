@@ -7,7 +7,7 @@ import subprocess
 from degree_constraints import generate_degree_clauses
 from triangle_constraints import generate_triangle_clauses
 from min_pclique_free import max_pclique_free
-
+from edges_sinz_seq import generate_edge_clauses
 #requires that the cnf file does not exist
 def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
 
@@ -72,6 +72,11 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
         MPCF='MPCF'
     else:
         MPCF=0
+    print('80 edges') 
+    edge_count,edge_clause=generate_edge_clauses(list(range(1,math.comb(n,2)+1)),80,80,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+    clause_count +=edge_clause
+    count=edge_count
+
 
     count=str(count)
     clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
