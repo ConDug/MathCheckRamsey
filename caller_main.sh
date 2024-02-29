@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --account=def-vganesh
-#SBATCH --time=110:00:00
-#####SBATCH --mem-per-cpu=4G
+#SBATCH --time=2:00:00
+#SBATCH --mem-per-cpu=4G
 #SBATCH --nodes=1
-#SBATCH --mem=0
+####SBATCH --mem=0
 #SBATCH --constraint=broadwell
 
 while getopts "nsld:D:E:F:P" opt
@@ -52,9 +52,10 @@ nodes=${8:-1} #Number of nodes to submit to if using -l
 module load python/3.10
 
 module load scipy-stack
-pip install tqdm --no-index
-pip install rl_coach
-pip install coloredlogs --no-index
-pip install wandb --no-index
-pip install argparse --no-index
+source ENV/bin/activate
+#pip install tqdm --no-index
+#pip install rl_coach
+#pip install coloredlogs --no-index
+#pip install wandb --no-index
+#pip install argparse --no-index
 ./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes

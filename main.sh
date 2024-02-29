@@ -125,13 +125,14 @@ case $solve_mode in
         ;;
     "par_cubing")
         echo "Cubing and solving in parallel on Compute Canada"
-        python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
+        #python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
 
         # Populate the array with the names of files found by the find command
         while IFS= read -r -d $'\0' file; do
         found_files+=("$file")
-        done < <(find . -regextype posix-extended -regex "./${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes}[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
+	done < <(find ${di} ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
+        #done < <(find . -regextype posix-extended -regex "./${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes}[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
 
         #use only first 50 cubes
         #found_files=("${found_files[@]:0:50}")
@@ -165,8 +166,11 @@ case $solve_mode in
 #SBATCH --time=1-00:00
 #SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
+#module load python/3.10
 module load python/3.10
 
+module load scipy-stack
+source ENV/bin/activate
 python parallel-solve.py $n $output_file $m $d $dv
 
 EOF
