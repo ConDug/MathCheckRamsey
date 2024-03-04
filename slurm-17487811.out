@@ -1,0 +1,2485 @@
+Prerequisite: pip and make installed
+Networkx version 3.2.1+computecanada is already installed and newer than 2.5
+March installed and binary file compiled
+Drat-trim installed and binary file compiled
+Cadical-ks installed and binary file compiled
+Maplesat-ks installed and binary file compiled
+All dependencies properly installed
+constraints_28_3_8_5_7_0_0_0
+10042
+10256
+10470
+10684
+10898
+11112
+11326
+11540
+11754
+11968
+12182
+12396
+12610
+12824
+13038
+13252
+13466
+13680
+13894
+14108
+14322
+14536
+14750
+14964
+15178
+15392
+15606
+15820
+0 0 15820 3163013
+par_cubing
+Cubing and solving in parallel on Compute Canada
+Solving the KS system of order  28  with  2428949  constraints
+378 variables will be considered for cubing
+2024-03-04 09:16:21 gra357 MCTS[25065] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  7.367
+2024-03-04 09:16:21 gra357 Coach[25065] INFO Saved cubes to file
+Reward:  0.01754187415119964
+Tool runtime:  39.056
+Solving the KS system of order  28  with  1494081  constraints
+378 variables will be considered for cubing
+2024-03-04 09:21:21 gra357 MCTS[25906] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  55.588
+2024-03-04 09:21:22 gra357 Coach[25906] INFO Saved cubes to file
+Reward:  0.017315527387958354
+Tool runtime:  84.837
+Solving the KS system of order  28  with  1879317  constraints
+378 variables will be considered for cubing
+2024-03-04 09:25:15 gra357 MCTS[28250] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  101.949
+2024-03-04 09:25:15 gra357 Coach[28250] INFO Saved cubes to file
+Reward:  0.013920325939339067
+Tool runtime:  156.951
+Solving the KS system of order  28  with  1330033  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  1435471  constraints
+378 variables will be considered for cubing
+2024-03-04 09:28:27 gra357 MCTS[28864] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  117.691
+2024-03-04 09:28:27 gra357 Coach[28864] INFO Saved cubes to file
+Reward:  0.010185604345857854
+Tool runtime:  168.293
+2024-03-04 09:30:23 gra357 MCTS[29092] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  129.535
+2024-03-04 09:30:23 gra357 Coach[29092] INFO Saved cubes to file
+Reward:  0.004979628791308284
+Tool runtime:  182.857
+Solving the KS system of order  28  with  851158  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  1443238  constraints
+378 variables will be considered for cubing
+2024-03-04 09:38:10 gra357 MCTS[15195] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  195.842
+2024-03-04 09:38:11 gra357 Coach[15195] INFO Saved cubes to file
+Reward:  0.025350837483023993
+Tool runtime:  244.845
+Solving the KS system of order  28  with  882441  constraints
+378 variables will be considered for cubing
+2024-03-04 09:39:53 gra357 MCTS[15336] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  178.936
+2024-03-04 09:39:53 gra357 Coach[15336] INFO Saved cubes to file
+Reward:  0.01278859212313264
+Tool runtime:  264.879
+Solving the KS system of order  28  with  986639  constraints
+378 variables will be considered for cubing
+2024-03-04 09:43:38 gra357 MCTS[15542] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  304.627
+2024-03-04 09:43:40 gra357 Coach[15542] INFO Saved cubes to file
+Reward:  0.013467632412856496
+Tool runtime:  354.835
+Solving the KS system of order  28  with  1435880  constraints
+378 variables will be considered for cubing
+2024-03-04 09:46:23 gra357 MCTS[16332] WARNING NO EXPLORATION!!!!
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5001.cubes' for reading: No such file or directory
+Time taken for cubing:  315.777
+2024-03-04 09:46:25 gra357 Coach[16332] INFO Saved cubes to file
+Reward:  0.007356269805341783
+Tool runtime:  388.647
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5001.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5001.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5001.cubes' for reading: No such file or directory
+Solving the KS system of order  28  with  992187  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:48:58 gra357 MCTS[17797] WARNING NO EXPLORATION!!!!
+2024-03-04 09:48:58 gra357 MCTS[17796] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.72
+Time taken for cubing:  0.738
+2024-03-04 09:48:58 gra357 Coach[17797] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.689
+2024-03-04 09:48:58 gra357 Coach[17796] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.716
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:49:41 gra357 MCTS[18696] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.791
+2024-03-04 09:49:41 gra357 MCTS[18695] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.797
+2024-03-04 09:49:41 gra357 Coach[18695] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.815
+2024-03-04 09:49:41 gra357 Coach[18696] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.827
+2024-03-04 09:49:41 gra357 MCTS[18702] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.785
+2024-03-04 09:49:41 gra357 Coach[18702] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.847
+2024-03-04 09:49:42 gra357 MCTS[18699] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.787
+2024-03-04 09:49:42 gra357 Coach[18699] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  1.847
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:50:38 gra357 MCTS[19499] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19504] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19503] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19496] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19495] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19464] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19505] WARNING NO EXPLORATION!!!!
+2024-03-04 09:50:38 gra357 MCTS[19465] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.827
+Time taken for cubing:  2.831
+Time taken for cubing:  2.793
+Time taken for cubing:  3.099
+Time taken for cubing:  2.949
+Time taken for cubing:  2.455
+Time taken for cubing:  2.863
+Time taken for cubing:  2.626
+2024-03-04 09:50:39 gra357 Coach[19465] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.431
+2024-03-04 09:50:39 gra357 Coach[19464] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.481
+2024-03-04 09:50:39 gra357 Coach[19505] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.829
+2024-03-04 09:50:39 gra357 Coach[19503] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.149
+2024-03-04 09:50:39 gra357 Coach[19495] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.217
+2024-03-04 09:50:39 gra357 Coach[19496] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.294
+2024-03-04 09:50:39 gra357 Coach[19499] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.19
+2024-03-04 09:50:40 gra357 Coach[19504] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.645
+Solving the KS system of order  28  with  634179  constraints
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5011.cubes' for reading: No such file or directory
+378 variables will be considered for cubing
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5011.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5011.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5011.cubes' for reading: No such file or directory
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:54:09 gra357 MCTS[20935] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20967] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20892] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20966] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20945] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20936] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20960] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20930] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20938] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20846] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20849] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20851] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20934] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20953] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:09 gra357 MCTS[20961] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.963
+Time taken for cubing:  1.955
+Time taken for cubing:  1.868
+Time taken for cubing:  1.98
+Time taken for cubing:  1.817
+Time taken for cubing:  1.78
+Time taken for cubing:  1.789
+Time taken for cubing:  1.801
+Time taken for cubing:  1.708
+Time taken for cubing:  1.805
+Time taken for cubing:  1.51
+Time taken for cubing:  1.572
+2024-03-04 09:54:09 gra357 Coach[20892] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.775
+Time taken for cubing:  1.63
+Time taken for cubing:  1.811
+2024-03-04 09:54:09 gra357 Coach[20936] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.786
+2024-03-04 09:54:09 gra357 Coach[20960] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.769
+2024-03-04 09:54:09 gra357 Coach[20930] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.695
+2024-03-04 09:54:09 gra357 Coach[20945] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.705
+2024-03-04 09:54:09 gra357 Coach[20935] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.763
+2024-03-04 09:54:09 gra357 Coach[20849] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.698
+2024-03-04 09:54:09 gra357 Coach[20967] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.779
+Time taken for cubing:  1.613
+2024-03-04 09:54:09 gra357 Coach[20938] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.791
+2024-03-04 09:54:09 gra357 Coach[20846] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.715
+2024-03-04 09:54:09 gra357 Coach[20966] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.841
+2024-03-04 09:54:09 gra357 Coach[20851] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.737
+2024-03-04 09:54:09 gra357 Coach[20961] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.787
+2024-03-04 09:54:09 gra357 Coach[20953] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.647
+2024-03-04 09:54:09 gra357 Coach[20934] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.044
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:54:18 gra357 MCTS[20956] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.202
+2024-03-04 09:54:18 gra357 Coach[20956] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.59
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:54:45 gra357 MCTS[23222] WARNING NO EXPLORATION!!!!
+2024-03-04 09:54:45 gra357 MCTS[23221] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.866
+Time taken for cubing:  1.865
+2024-03-04 09:54:46 gra357 Coach[23222] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.554
+2024-03-04 09:54:46 gra357 Coach[23221] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.567
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:55:38 gra357 MCTS[23761] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  3.733
+2024-03-04 09:55:41 gra357 Coach[23761] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  6.548
+Solving the KS system of order  28  with  0  constraints
+Solving the KS system of order  28  with  0  constraintsSolving the KS system of order  28  with  0  constraints
+
+378 variables will be considered for cubing
+378 variables will be considered for cubing
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5101.cubes' for reading: No such file or directory
+2024-03-04 09:56:23 gra357 MCTS[25801] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25780] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25917] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25768] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25764] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25787] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25766] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25803] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25767] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25783] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25791] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25770] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25784] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25789] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25757] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25797] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25776] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25782] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25779] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25788] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25811] WARNING NO EXPLORATION!!!!
+2024-03-04 09:56:23 gra357 MCTS[25760] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  27.039
+Time taken for cubing:  27.014
+Time taken for cubing:  27.053
+Time taken for cubing:  27.09
+Time taken for cubing:  26.611
+Time taken for cubing:  27.189
+Time taken for cubing:  26.861
+Time taken for cubing:  26.956
+Time taken for cubing:  26.574
+Time taken for cubing:  26.808
+Time taken for cubing:  26.887
+Time taken for cubing:  26.833
+Time taken for cubing:  26.923
+Time taken for cubing:  26.981
+Time taken for cubing:  27.19
+Time taken for cubing:  27.191
+Time taken for cubing:  26.916
+Time taken for cubing:  27.149
+Time taken for cubing:  27.182
+Time taken for cubing:  27.121
+Time taken for cubing:  27.107
+Time taken for cubing:  26.606
+2024-03-04 09:56:24 gra357 Coach[25779] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.436
+2024-03-04 09:56:24 gra357 Coach[25767] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.41
+2024-03-04 09:56:24 gra357 Coach[25768] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.265
+2024-03-04 09:56:24 gra357 Coach[25784] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.472
+2024-03-04 09:56:24 gra357 Coach[25788] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.436
+2024-03-04 09:56:24 gra357 Coach[25917] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.415
+2024-03-04 09:56:24 gra357 Coach[25757] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.409
+2024-03-04 09:56:24 gra357 Coach[25782] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.635
+2024-03-04 09:56:24 gra357 Coach[25783] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.392
+2024-03-04 09:56:24 gra357 Coach[25764] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.4
+2024-03-04 09:56:24 gra357 Coach[25787] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.46
+2024-03-04 09:56:24 gra357 Coach[25801] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.399
+2024-03-04 09:56:24 gra357 Coach[25776] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.549
+2024-03-04 09:56:24 gra357 Coach[25760] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.483
+2024-03-04 09:56:24 gra357 Coach[25780] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.566
+2024-03-04 09:56:24 gra357 Coach[25766] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.542
+2024-03-04 09:56:24 gra357 Coach[25803] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.699
+2024-03-04 09:56:24 gra357 Coach[25797] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.541
+2024-03-04 09:56:24 gra357 Coach[25791] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.532
+2024-03-04 09:56:24 gra357 Coach[25770] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.541
+2024-03-04 09:56:24 gra357 Coach[25811] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.622
+2024-03-04 09:56:24 gra357 Coach[25789] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  29.415
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 09:57:02 gra357 MCTS[26211] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.884
+2024-03-04 09:57:02 gra357 MCTS[26199] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.0
+2024-03-04 09:57:02 gra357 Coach[26211] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.303
+2024-03-04 09:57:02 gra357 Coach[26199] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.338
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5101.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5101.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5101.cubes' for reading: No such file or directory
+Solving the KS system of order  28  with  726155  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  806050  constraints
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_50001.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_50001.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_50001.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_50001.cubes' for reading: No such file or directory
+2024-03-04 10:02:25 gra357 MCTS[19597] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  244.556
+2024-03-04 10:02:25 gra357 Coach[19597] INFO Saved cubes to file
+Reward:  0.00803531009506564
+Tool runtime:  531.011
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:03:01 gra357 MCTS[26557] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.798
+2024-03-04 10:03:01 gra357 MCTS[29045] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.6
+2024-03-04 10:03:01 gra357 MCTS[29324] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.809
+2024-03-04 10:03:01 gra357 MCTS[29325] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.959
+2024-03-04 10:03:01 gra357 MCTS[29028] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.719
+2024-03-04 10:03:01 gra357 MCTS[29020] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.894
+2024-03-04 10:03:01 gra357 MCTS[29036] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.983
+2024-03-04 10:03:01 gra357 MCTS[29032] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.505
+2024-03-04 10:03:01 gra357 MCTS[29056] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.71
+2024-03-04 10:03:01 gra357 MCTS[29055] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.76
+2024-03-04 10:03:01 gra357 MCTS[29039] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.817
+2024-03-04 10:03:01 gra357 MCTS[29046] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.774
+2024-03-04 10:03:01 gra357 MCTS[29035] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.76
+2024-03-04 10:03:01 gra357 MCTS[29034] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.925
+2024-03-04 10:03:01 gra357 MCTS[29021] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.994
+2024-03-04 10:03:01 gra357 MCTS[29057] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.911
+2024-03-04 10:03:01 gra357 MCTS[29059] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.972
+2024-03-04 10:03:01 gra357 MCTS[29024] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.865
+2024-03-04 10:03:01 gra357 MCTS[29040] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.886
+2024-03-04 10:03:01 gra357 MCTS[29033] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.568
+2024-03-04 10:03:01 gra357 MCTS[29038] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.826
+2024-03-04 10:03:01 gra357 MCTS[29054] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.467
+2024-03-04 10:03:01 gra357 MCTS[29027] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.008
+2024-03-04 10:03:01 gra357 Coach[29045] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.357
+2024-03-04 10:03:01 gra357 Coach[26557] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.371
+2024-03-04 10:03:01 gra357 MCTS[29043] WARNING NO EXPLORATION!!!!
+2024-03-04 10:03:01 gra357 MCTS[29042] WARNING NO EXPLORATION!!!!
+2024-03-04 10:03:01 gra357 Coach[29324] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.377
+Time taken for cubing:  1.441
+2024-03-04 10:03:01 gra357 Coach[29020] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.379
+2024-03-04 10:03:01 gra357 MCTS[29439] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.375
+2024-03-04 10:03:01 gra357 Coach[29028] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.386
+2024-03-04 10:03:01 gra357 Coach[29325] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.407
+2024-03-04 10:03:01 gra357 Coach[29036] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.411
+2024-03-04 10:03:01 gra357 Coach[29056] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.414
+2024-03-04 10:03:01 gra357 Coach[29039] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.42
+2024-03-04 10:03:01 gra357 Coach[29032] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.448
+2024-03-04 10:03:01 gra357 Coach[29046] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.456
+2024-03-04 10:03:01 gra357 Coach[29035] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.466
+2024-03-04 10:03:01 gra357 Coach[29024] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.384
+2024-03-04 10:03:01 gra357 Coach[29040] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.48
+2024-03-04 10:03:01 gra357 Coach[29021] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.476
+2024-03-04 10:03:01 gra357 Coach[29034] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.494
+2024-03-04 10:03:01 gra357 Coach[29033] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.505
+2024-03-04 10:03:01 gra357 Coach[29059] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.502
+2024-03-04 10:03:01 gra357 Coach[29057] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.501
+2024-03-04 10:03:01 gra357 Coach[29038] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.53
+2024-03-04 10:03:01 gra357 Coach[29027] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.533
+2024-03-04 10:03:01 gra357 Coach[29054] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.544
+Time taken for cubing:  1.556
+2024-03-04 10:03:01 gra357 Coach[29042] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.603
+2024-03-04 10:03:01 gra357 Coach[29055] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.614
+2024-03-04 10:03:01 gra357 Coach[29043] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.619
+2024-03-04 10:03:01 gra357 Coach[29439] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.632
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:05:06 gra357 MCTS[3277] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.216
+2024-03-04 10:05:07 gra357 MCTS[3239] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.207
+2024-03-04 10:05:07 gra357 MCTS[3238] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3236] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3297] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3217] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.071
+2024-03-04 10:05:07 gra357 Coach[3277] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.853
+2024-03-04 10:05:07 gra357 MCTS[3298] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.218
+2024-03-04 10:05:07 gra357 MCTS[3287] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3283] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.185
+2024-03-04 10:05:07 gra357 MCTS[2556] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.227
+Time taken for cubing:  2.226
+Time taken for cubing:  2.185
+Time taken for cubing:  2.136
+2024-03-04 10:05:07 gra357 MCTS[3308] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.094
+2024-03-04 10:05:07 gra357 Coach[3239] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.97
+Time taken for cubing:  2.125
+2024-03-04 10:05:07 gra357 Coach[3298] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.937
+2024-03-04 10:05:07 gra357 Coach[3217] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.862
+2024-03-04 10:05:07 gra357 Coach[3283] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.849
+2024-03-04 10:05:07 gra357 Coach[3238] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.855
+2024-03-04 10:05:07 gra357 Coach[2556] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.86
+2024-03-04 10:05:07 gra357 Coach[3297] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.984
+2024-03-04 10:05:07 gra357 MCTS[3301] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.03
+2024-03-04 10:05:07 gra357 MCTS[3340] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.101
+2024-03-04 10:05:07 gra357 MCTS[3309] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.013
+2024-03-04 10:05:07 gra357 Coach[3287] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.096
+2024-03-04 10:05:07 gra357 Coach[3308] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.989
+2024-03-04 10:05:07 gra357 Coach[3301] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.555
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:05:07 gra357 Coach[3309] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.553
+2024-03-04 10:05:07 gra357 Coach[3236] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.22
+2024-03-04 10:05:07 gra357 MCTS[3190] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.089
+2024-03-04 10:05:07 gra357 MCTS[3224] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.123
+2024-03-04 10:05:07 gra357 Coach[3340] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.774
+2024-03-04 10:05:07 gra357 Coach[3190] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.584
+2024-03-04 10:05:07 gra357 MCTS[3314] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.03
+2024-03-04 10:05:07 gra357 MCTS[3316] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.031
+2024-03-04 10:05:07 gra357 MCTS[3184] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.028
+2024-03-04 10:05:07 gra357 Coach[3224] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.675
+2024-03-04 10:05:07 gra357 Coach[3316] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.563
+2024-03-04 10:05:07 gra357 MCTS[3311] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3342] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 Coach[3314] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.587
+2024-03-04 10:05:07 gra357 MCTS[30348] WARNING NO EXPLORATION!!!!
+2024-03-04 10:05:07 gra357 MCTS[3291] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.006
+Time taken for cubing:  2.113
+Time taken for cubing:  2.036
+Time taken for cubing:  2.057
+2024-03-04 10:05:07 gra357 Coach[3184] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.754
+2024-03-04 10:05:07 gra357 MCTS[3188] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.016
+2024-03-04 10:05:08 gra357 Coach[3311] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.679
+2024-03-04 10:05:08 gra357 Coach[3291] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.631
+2024-03-04 10:05:08 gra357 Coach[3342] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.683
+2024-03-04 10:05:08 gra357 Coach[30348] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.785
+2024-03-04 10:05:08 gra357 MCTS[3310] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.963
+2024-03-04 10:05:08 gra357 MCTS[3299] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.962
+2024-03-04 10:05:08 gra357 Coach[3188] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.763
+2024-03-04 10:05:08 gra357 MCTS[3189] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.96
+2024-03-04 10:05:08 gra357 Coach[3310] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.677
+2024-03-04 10:05:08 gra357 Coach[3299] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.677
+2024-03-04 10:05:08 gra357 Coach[3189] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.689
+2024-03-04 10:05:09 gra357 MCTS[3230] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.964
+2024-03-04 10:05:09 gra357 Coach[3230] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.906
+Solving the KS system of order  28  with  654104  constraints
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5100.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5100.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5100.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5100.cubes' for reading: No such file or directory
+378 variables will be considered for cubing
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5110.cubes' for reading: No such file or directory
+Solving the KS system of order  28  with  986940  constraints
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5110.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5110.cubes' for reading: No such file or directory
+head: cannot open '28_3_8_5_7_0_0_0_100000_2_d_12_5_l/constraints_28_3_8_5_7_0_0_0_100000_2_d_12_5110.cubes' for reading: No such file or directory
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:08:53 gra357 MCTS[6484] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6487] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6455] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6450] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6658] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6457] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6485] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6488] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6463] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6462] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6517] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6511] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6659] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6500] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6435] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6456] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6452] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6486] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6515] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6501] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6464] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6433] WARNING NO EXPLORATION!!!!
+2024-03-04 10:08:53 gra357 MCTS[6512] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.133
+Time taken for cubing:  1.602
+Time taken for cubing:  2.046
+Time taken for cubing:  2.108
+Time taken for cubing:  2.112
+Time taken for cubing:  2.055
+Time taken for cubing:  2.026
+Time taken for cubing:  1.971
+Time taken for cubing:  2.129
+Time taken for cubing:  2.126
+Time taken for cubing:  2.122
+Time taken for cubing:  2.052
+Time taken for cubing:  1.999
+Time taken for cubing:  2.119
+Time taken for cubing:  1.99
+Time taken for cubing:  1.994
+Time taken for cubing:  1.969
+Time taken for cubing:  2.136
+Time taken for cubing:  2.105
+Time taken for cubing:  2.084
+Time taken for cubing:  1.603
+Time taken for cubing:  1.627
+Time taken for cubing:  2.063
+2024-03-04 10:08:53 gra357 Coach[6486] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.829
+2024-03-04 10:08:53 gra357 Coach[6512] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.826
+2024-03-04 10:08:53 gra357 Coach[6511] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.833
+2024-03-04 10:08:53 gra357 Coach[6659] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.842
+2024-03-04 10:08:53 gra357 Coach[6456] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.853
+2024-03-04 10:08:53 gra357 Coach[6455] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.853
+2024-03-04 10:08:53 gra357 Coach[6457] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.863
+2024-03-04 10:08:53 gra357 Coach[6515] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.864
+2024-03-04 10:08:53 gra357 Coach[6517] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.869
+2024-03-04 10:08:53 gra357 Coach[6462] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.87
+2024-03-04 10:08:53 gra357 Coach[6435] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.883
+2024-03-04 10:08:53 gra357 Coach[6487] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.889
+2024-03-04 10:08:53 gra357 Coach[6500] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.886
+2024-03-04 10:08:53 gra357 Coach[6485] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.9
+2024-03-04 10:08:53 gra357 Coach[6488] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.902
+2024-03-04 10:08:53 gra357 Coach[6452] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.903
+2024-03-04 10:08:53 gra357 Coach[6484] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.905
+2024-03-04 10:08:53 gra357 Coach[6658] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.908
+2024-03-04 10:08:53 gra357 Coach[6464] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.92
+2024-03-04 10:08:53 gra357 Coach[6433] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.926
+2024-03-04 10:08:53 gra357 Coach[6501] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.92
+2024-03-04 10:08:53 gra357 Coach[6463] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.996
+2024-03-04 10:08:53 gra357 Coach[6450] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.013
+2024-03-04 10:08:53 gra357 MCTS[6444] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.514
+2024-03-04 10:08:54 gra357 Coach[6444] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.252
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28 Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+ with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:10:15 gra357 MCTS[6848] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:15 gra357 MCTS[7029] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.841
+2024-03-04 10:10:15 gra357 MCTS[7504] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.697
+2024-03-04 10:10:15 gra357 Coach[7029] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.326
+Time taken for cubing:  1.938
+2024-03-04 10:10:15 gra357 MCTS[7330] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.837
+2024-03-04 10:10:15 gra357 Coach[7504] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.569
+2024-03-04 10:10:15 gra357 Coach[6848] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.52
+2024-03-04 10:10:15 gra357 Coach[7330] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.477
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:10:35 gra357 MCTS[10344] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.088
+2024-03-04 10:10:35 gra357 MCTS[10348] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.143
+2024-03-04 10:10:35 gra357 MCTS[10337] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.128
+2024-03-04 10:10:35 gra357 MCTS[10353] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:35 gra357 MCTS[10346] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:35 gra357 Coach[10344] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.447
+Time taken for cubing:  2.122
+2024-03-04 10:10:35 gra357 Coach[10337] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.449
+2024-03-04 10:10:35 gra357 MCTS[10351] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.068
+2024-03-04 10:10:35 gra357 Coach[10348] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.371
+2024-03-04 10:10:35 gra357 MCTS[10354] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.127
+Time taken for cubing:  2.111
+2024-03-04 10:10:35 gra357 Coach[10353] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.58
+2024-03-04 10:10:35 gra357 MCTS[10356] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:35 gra357 Coach[10351] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.536
+2024-03-04 10:10:35 gra357 MCTS[10341] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.021
+2024-03-04 10:10:35 gra357 Coach[10346] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.53
+Time taken for cubing:  2.052
+2024-03-04 10:10:35 gra357 Coach[10354] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.549
+2024-03-04 10:10:35 gra357 Coach[10341] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.517
+2024-03-04 10:10:35 gra357 Coach[10356] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.428
+2024-03-04 10:10:35 gra357 MCTS[10336] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:35 gra357 MCTS[10367] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.061
+Time taken for cubing:  2.067
+2024-03-04 10:10:35 gra357 Coach[10367] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.552
+2024-03-04 10:10:35 gra357 Coach[10336] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.397
+2024-03-04 10:10:36 gra357 MCTS[10362] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.037
+2024-03-04 10:10:36 gra357 MCTS[10359] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.078
+2024-03-04 10:10:36 gra357 Coach[10362] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.478
+2024-03-04 10:10:36 gra357 MCTS[10352] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.033
+2024-03-04 10:10:36 gra357 Coach[10359] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.502
+2024-03-04 10:10:36 gra357 MCTS[10345] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.996
+2024-03-04 10:10:36 gra357 Coach[10352] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.4
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:10:36 gra357 Coach[10345] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.487
+2024-03-04 10:10:36 gra357 MCTS[10347] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.911
+2024-03-04 10:10:36 gra357 MCTS[10357] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.025
+2024-03-04 10:10:36 gra357 MCTS[10369] WARNING NO EXPLORATION!!!!
+2024-03-04 10:10:36 gra357 Coach[10347] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.544
+2024-03-04 10:10:36 gra357 Coach[10357] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.66
+Time taken for cubing:  2.059
+2024-03-04 10:10:36 gra357 MCTS[10365] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.991
+2024-03-04 10:10:36 gra357 Coach[10369] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.652
+2024-03-04 10:10:37 gra357 Coach[10365] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.663
+2024-03-04 10:10:37 gra357 MCTS[10361] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.927
+2024-03-04 10:10:37 gra357 MCTS[10368] WARNING NO EXPLORATION!!!!
+Time taken for cubing: 2024-03-04 10:10:37 gra357 MCTS[10366] WARNING NO EXPLORATION!!!!
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Time taken for cubing:  1.995
+2024-03-04 10:10:37 gra357 Coach[10361] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.643
+ 1.965
+2024-03-04 10:10:37 gra357 Coach[10368] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.735
+2024-03-04 10:10:37 gra357 Coach[10366] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.739
+2024-03-04 10:10:38 gra357 MCTS[10372] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.074
+2024-03-04 10:10:38 gra357 Coach[10372] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.903
+2024-03-04 10:10:39 gra357 MCTS[10373] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.812
+2024-03-04 10:10:39 gra357 Coach[10373] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.969
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:12:35 gra357 MCTS[11141] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.996
+2024-03-04 10:12:35 gra357 MCTS[11139] WARNING NO EXPLORATION!!!!
+2024-03-04 10:12:35 gra357 Coach[11141] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.024
+Time taken for cubing:  2.312
+2024-03-04 10:12:35 gra357 MCTS[11138] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.934
+2024-03-04 10:12:35 gra357 Coach[11139] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.017
+2024-03-04 10:12:35 gra357 Coach[11138] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.159
+2024-03-04 10:12:37 gra357 MCTS[11148] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.926
+2024-03-04 10:12:37 gra357 Coach[11148] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.646
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:03 gra357 MCTS[13598] WARNING NO EXPLORATION!!!!
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Time taken for cubing:  2.008
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:03 gra357 MCTS[13601] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.913
+2024-03-04 10:13:03 gra357 Coach[13598] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.733
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:04 gra357 MCTS[13596] WARNING NO EXPLORATION!!!!
+2024-03-04 10:13:04 gra357 MCTS[13599] WARNING NO EXPLORATION!!!!
+2024-03-04 10:13:04 gra357 Coach[13601] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.575
+2024-03-04 10:13:04 gra357 MCTS[13584] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.941
+2024-03-04 10:13:04 gra357 MCTS[13576] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.924
+Time taken for cubing:  1.99
+Time taken for cubing:  2.002
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:04 gra357 Coach[13584] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.706
+2024-03-04 10:13:04 gra357 Coach[13599] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.597
+2024-03-04 10:13:04 gra357 Coach[13596] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.818
+2024-03-04 10:13:04 gra357 Coach[13576] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.694
+2024-03-04 10:13:04 gra357 MCTS[13583] WARNING NO EXPLORATION!!!!
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Time taken for cubing:  1.999
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:04 gra357 Coach[13583] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.62
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:05 gra357 MCTS[13640] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.007
+2024-03-04 10:13:05 gra357 MCTS[13644] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.006
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:06 gra357 MCTS[13645] WARNING NO EXPLORATION!!!!
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Time taken for cubing:  2.058
+2024-03-04 10:13:06 gra357 MCTS[13634] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.039
+2024-03-04 10:13:06 gra357 MCTS[13670] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.965
+2024-03-04 10:13:06 gra357 Coach[13644] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.516
+2024-03-04 10:13:06 gra357 MCTS[13641] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.965
+2024-03-04 10:13:06 gra357 MCTS[13654] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.1
+2024-03-04 10:13:06 gra357 Coach[13640] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.644
+2024-03-04 10:13:06 gra357 Coach[13634] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.441
+2024-03-04 10:13:06 gra357 Coach[13641] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.522
+2024-03-04 10:13:06 gra357 Coach[13645] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.553
+2024-03-04 10:13:06 gra357 MCTS[13643] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.879
+2024-03-04 10:13:06 gra357 Coach[13670] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.477
+2024-03-04 10:13:06 gra357 Coach[13654] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.604
+2024-03-04 10:13:06 gra357 Coach[13643] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.549
+2024-03-04 10:13:06 gra357 MCTS[13651] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.988
+2024-03-04 10:13:06 gra357 Coach[13651] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.544
+2024-03-04 10:13:06 gra357 MCTS[13649] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.986
+2024-03-04 10:13:06 gra357 Coach[13649] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.508
+2024-03-04 10:13:06 gra357 MCTS[13658] WARNING NO EXPLORATION!!!!
+2024-03-04 10:13:07 gra357 MCTS[13647] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.975
+2024-03-04 10:13:07 gra357 Coach[13658] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.505
+Time taken for cubing:  1.991
+2024-03-04 10:13:07 gra357 Coach[13647] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.539
+2024-03-04 10:13:07 gra357 MCTS[13655] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.809
+2024-03-04 10:13:07 gra357 Coach[13655] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.547
+2024-03-04 10:13:07 gra357 MCTS[13650] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.871
+2024-03-04 10:13:08 gra357 Coach[13650] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.51
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:13:10 gra357 MCTS[13690] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.985
+2024-03-04 10:13:10 gra357 MCTS[13687] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.996
+2024-03-04 10:13:10 gra357 Coach[13690] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.545
+2024-03-04 10:13:10 gra357 Coach[13687] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.547
+2024-03-04 10:13:11 gra357 MCTS[13689] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.008
+2024-03-04 10:13:11 gra357 Coach[13689] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.59
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:34 gra357 MCTS[14374] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.005
+2024-03-04 10:14:34 gra357 MCTS[14363] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.035
+2024-03-04 10:14:34 gra357 Coach[14374] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.853
+2024-03-04 10:14:34 gra357 Coach[14363] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.881
+2024-03-04 10:14:34 gra357 MCTS[14378] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.012
+2024-03-04 10:14:34 gra357 Coach[14378] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.85
+2024-03-04 10:14:35 gra357 MCTS[14381] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.934
+2024-03-04 10:14:35 gra357 Coach[14381] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.91
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:53 gra357 MCTS[17030] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.948
+2024-03-04 10:14:53 gra357 Coach[17030] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.534
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:53 gra357 MCTS[17014] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.758
+2024-03-04 10:14:53 gra357 MCTS[16968] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.792
+2024-03-04 10:14:53 gra357 MCTS[16965] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.786
+2024-03-04 10:14:53 gra357 Coach[17014] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.451
+2024-03-04 10:14:53 gra357 Coach[16968] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.487
+2024-03-04 10:14:53 gra357 MCTS[17016] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.887
+2024-03-04 10:14:53 gra357 MCTS[17021] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.988
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:54 gra357 Coach[17016] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.507
+2024-03-04 10:14:54 gra357 Coach[17021] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.552
+2024-03-04 10:14:54 gra357 Coach[16965] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.017
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:55 gra357 MCTS[17241] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.028
+2024-03-04 10:14:55 gra357 MCTS[17233] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.018
+2024-03-04 10:14:55 gra357 MCTS[17231] WARNING NO EXPLORATION!!!!
+2024-03-04 10:14:55 gra357 MCTS[17091] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.973
+2024-03-04 10:14:55 gra357 MCTS[17210] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.079
+2024-03-04 10:14:55 gra357 MCTS[17224] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.079
+2024-03-04 10:14:55 gra357 Coach[17233] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.485
+2024-03-04 10:14:55 gra357 Coach[17241] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.702
+Time taken for cubing:  2.04
+2024-03-04 10:14:55 gra357 Coach[17091] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.576
+2024-03-04 10:14:55 gra357 Coach[17210] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.714
+2024-03-04 10:14:55 gra357 Coach[17224] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.664
+2024-03-04 10:14:55 gra357 Coach[17231] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.477
+2024-03-04 10:14:55 gra357 MCTS[17239] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.003
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:55 gra357 Coach[17239] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.507
+2024-03-04 10:14:55 gra357 MCTS[17289] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.85
+2024-03-04 10:14:56 gra357 Coach[17289] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.485
+2024-03-04 10:14:56 gra357 MCTS[17240] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.909
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:56 gra357 Coach[17240] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.506
+2024-03-04 10:14:56 gra357 MCTS[17265] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.899
+2024-03-04 10:14:56 gra357 Coach[17265] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.465
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:56 gra357 MCTS[17294] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.911
+2024-03-04 10:14:57 gra357 Coach[17294] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.511
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:57 gra357 MCTS[17304] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.937
+2024-03-04 10:14:57 gra357 Coach[17304] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.534
+2024-03-04 10:14:58 gra357 MCTS[17341] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.893
+2024-03-04 10:14:58 gra357 Coach[17341] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.541
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:14:58 gra357 MCTS[17375] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.018
+2024-03-04 10:14:58 gra357 Coach[17375] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.517
+2024-03-04 10:14:59 gra357 MCTS[17396] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.887
+2024-03-04 10:14:59 gra357 Coach[17396] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.448
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:15:00 gra357 MCTS[17407] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.908
+2024-03-04 10:15:00 gra357 Coach[17407] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.519
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:15:01 gra357 MCTS[17408] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.936
+2024-03-04 10:15:01 gra357 Coach[17408] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.548
+2024-03-04 10:15:02 gra357 MCTS[17411] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.981
+2024-03-04 10:15:02 gra357 Coach[17411] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.452
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:28 gra357 MCTS[18156] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.899
+2024-03-04 10:16:28 gra357 Coach[18156] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.575
+2024-03-04 10:16:28 gra357 MCTS[18149] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.923
+2024-03-04 10:16:28 gra357 MCTS[18157] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.823
+2024-03-04 10:16:28 gra357 Coach[18149] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.684
+2024-03-04 10:16:28 gra357 Coach[18157] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.666
+2024-03-04 10:16:29 gra357 MCTS[18150] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.889
+2024-03-04 10:16:29 gra357 Coach[18150] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.651
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:42 gra357 MCTS[20252] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.669
+2024-03-04 10:16:42 gra357 MCTS[20276] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.812
+2024-03-04 10:16:42 gra357 Coach[20252] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.681
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:42 gra357 Coach[20276] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.768
+2024-03-04 10:16:42 gra357 MCTS[20286] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.687
+2024-03-04 10:16:42 gra357 MCTS[20254] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.807
+2024-03-04 10:16:42 gra357 Coach[20286] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.501
+2024-03-04 10:16:42 gra357 Coach[20254] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.599
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:43 gra357 MCTS[20361] WARNING NO EXPLORATION!!!!
+2024-03-04 10:16:43 gra357 MCTS[20335] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.917
+Time taken for cubing:  1.953
+2024-03-04 10:16:43 gra357 Coach[20335] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.539
+2024-03-04 10:16:43 gra357 Coach[20361] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.58
+2024-03-04 10:16:43 gra357 MCTS[20456] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.859
+2024-03-04 10:16:43 gra357 Coach[20456] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.469
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:44 gra357 MCTS[20455] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.919
+2024-03-04 10:16:44 gra357 Coach[20455] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.399
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:44 gra357 MCTS[20542] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.856
+2024-03-04 10:16:44 gra357 MCTS[20588] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.941
+2024-03-04 10:16:44 gra357 MCTS[20512] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.976
+2024-03-04 10:16:44 gra357 Coach[20588] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.42
+2024-03-04 10:16:44 gra357 Coach[20542] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.319
+2024-03-04 10:16:44 gra357 Coach[20512] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.551
+2024-03-04 10:16:44 gra357 MCTS[20568] WARNING NO EXPLORATION!!!!
+2024-03-04 10:16:44 gra357 MCTS[20590] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.921
+2024-03-04 10:16:45 gra357 Coach[20590] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.425
+Time taken for cubing:  1.933
+2024-03-04 10:16:45 gra357 Coach[20568] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.305
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:45 gra357 MCTS[20599] WARNING NO EXPLORATION!!!!
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Time taken for cubing:  1.912
+2024-03-04 10:16:46 gra357 Coach[20599] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.373
+2024-03-04 10:16:46 gra357 MCTS[20626] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.9
+2024-03-04 10:16:46 gra357 Coach[20626] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.366
+2024-03-04 10:16:46 gra357 MCTS[20650] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.938
+2024-03-04 10:16:47 gra357 Coach[20650] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.402
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:47 gra357 MCTS[20676] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.944
+2024-03-04 10:16:47 gra357 Coach[20676] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.386
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:49 gra357 MCTS[20685] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.927
+2024-03-04 10:16:49 gra357 Coach[20685] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.406
+2024-03-04 10:16:51 gra357 MCTS[20706] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.008
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:16:51 gra357 Coach[20706] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.554
+2024-03-04 10:16:53 gra357 MCTS[20714] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.968
+2024-03-04 10:16:53 gra357 Coach[20714] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.537
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:17:27 gra357 MCTS[20904] WARNING NO EXPLORATION!!!!
+2024-03-04 10:17:27 gra357 MCTS[20903] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.964
+Time taken for cubing:  2.054
+2024-03-04 10:17:27 gra357 Coach[20904] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.65
+2024-03-04 10:17:27 gra357 Coach[20903] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.552
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:17:49 gra357 MCTS[21066] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.852
+2024-03-04 10:17:50 gra357 Coach[21066] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.011
+2024-03-04 10:17:50 gra357 MCTS[21080] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.897
+2024-03-04 10:17:50 gra357 Coach[21080] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.784
+2024-03-04 10:17:54 gra357 MCTS[30281] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  611.623
+2024-03-04 10:17:55 gra357 Coach[30281] INFO Saved cubes to file
+Reward:  0.0055454956994114984
+Tool runtime:  772.821
+Solving the KS system of order  28  with  365648  constraints
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:20 gra357 MCTS[21653] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.997
+2024-03-04 10:18:20 gra357 Coach[21653] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.631
+2024-03-04 10:18:20 gra357 MCTS[21656] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.989
+2024-03-04 10:18:20 gra357 Coach[21656] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.741
+2024-03-04 10:18:20 gra357 MCTS[21658] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.019
+2024-03-04 10:18:20 gra357 MCTS[21654] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.031
+2024-03-04 10:18:21 gra357 Coach[21658] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.978
+2024-03-04 10:18:21 gra357 Coach[21654] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.959
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:32 gra357 MCTS[23284] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.98
+2024-03-04 10:18:32 gra357 MCTS[23314] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.991
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:32 gra357 Coach[23314] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.522
+2024-03-04 10:18:33 gra357 Coach[23284] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.816
+2024-03-04 10:18:33 gra357 MCTS[23316] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.993
+2024-03-04 10:18:33 gra357 MCTS[23313] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.047
+2024-03-04 10:18:33 gra357 Coach[23316] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.685
+2024-03-04 10:18:33 gra357 Coach[23313] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.868
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:33 gra357 MCTS[23444] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.004
+2024-03-04 10:18:33 gra357 Coach[23444] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.617
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:34 gra357 MCTS[23422] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.065
+2024-03-04 10:18:34 gra357 Coach[23422] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.845
+2024-03-04 10:18:34 gra357 MCTS[23522] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.045
+2024-03-04 10:18:34 gra357 Coach[23522] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.945
+2024-03-04 10:18:34 gra357 MCTS[23588] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.084
+2024-03-04 10:18:34 gra357 MCTS[23550] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.011
+2024-03-04 10:18:34 gra357 MCTS[23567] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.021
+2024-03-04 10:18:34 gra357 MCTS[23582] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.026
+2024-03-04 10:18:34 gra357 Coach[23588] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.643
+378 variables will be considered for cubing
+2024-03-04 10:18:35 gra357 Coach[23550] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.713
+2024-03-04 10:18:35 gra357 Coach[23582] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.707
+2024-03-04 10:18:35 gra357 Coach[23567] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.592
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:35 gra357 MCTS[23598] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.035
+2024-03-04 10:18:35 gra357 Coach[23598] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.692
+2024-03-04 10:18:35 gra357 MCTS[23602] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.947
+2024-03-04 10:18:35 gra357 Coach[23602] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.646
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:37 gra357 MCTS[23659] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.957
+2024-03-04 10:18:37 gra357 Coach[23659] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.541
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:38 gra357 MCTS[23728] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.037
+2024-03-04 10:18:38 gra357 Coach[23728] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.499
+2024-03-04 10:18:39 gra357 MCTS[23727] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.007
+2024-03-04 10:18:39 gra357 Coach[23727] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.569
+2024-03-04 10:18:39 gra357 MCTS[23737] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.033
+2024-03-04 10:18:39 gra357 Coach[23737] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.526
+2024-03-04 10:18:40 gra357 MCTS[23772] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.892
+2024-03-04 10:18:40 gra357 Coach[23772] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.461
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:43 gra357 MCTS[23803] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.903
+2024-03-04 10:18:43 gra357 Coach[23803] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.306
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:18:47 gra357 MCTS[23818] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.941
+2024-03-04 10:18:47 gra357 Coach[23818] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.528
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:19:26 gra357 MCTS[24155] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.945
+2024-03-04 10:19:26 gra357 MCTS[24156] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.019
+2024-03-04 10:19:26 gra357 Coach[24155] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.468
+2024-03-04 10:19:26 gra357 Coach[24156] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.542
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:19:48 gra357 MCTS[24731] WARNING NO EXPLORATION!!!!
+2024-03-04 10:19:48 gra357 MCTS[24732] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.831
+Time taken for cubing:  1.874
+2024-03-04 10:19:48 gra357 Coach[24731] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.977
+2024-03-04 10:19:48 gra357 Coach[24732] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.164
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:13 gra357 MCTS[25390] WARNING NO EXPLORATION!!!!
+2024-03-04 10:20:13 gra357 MCTS[25393] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.95
+2024-03-04 10:20:13 gra357 MCTS[25344] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.939
+2024-03-04 10:20:13 gra357 MCTS[25369] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.985
+Time taken for cubing:  1.997
+2024-03-04 10:20:14 gra357 Coach[25393] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.666
+2024-03-04 10:20:14 gra357 Coach[25344] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.689
+2024-03-04 10:20:14 gra357 Coach[25390] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.701
+2024-03-04 10:20:14 gra357 Coach[25369] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.684
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:23 gra357 MCTS[27025] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.894
+2024-03-04 10:20:23 gra357 MCTS[26975] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.942
+2024-03-04 10:20:23 gra357 MCTS[26974] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.998
+2024-03-04 10:20:23 gra357 Coach[27025] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.829
+2024-03-04 10:20:23 gra357 Coach[26975] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.71
+2024-03-04 10:20:23 gra357 Coach[26974] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.785
+2024-03-04 10:20:23 gra357 MCTS[27079] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.932
+2024-03-04 10:20:23 gra357 MCTS[27148] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.97
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:23 gra357 Coach[27148] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.62
+2024-03-04 10:20:23 gra357 MCTS[27005] WARNING NO EXPLORATION!!!!
+2024-03-04 10:20:23 gra357 Coach[27079] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.754
+Time taken for cubing:  1.986
+2024-03-04 10:20:24 gra357 MCTS[27139] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.963
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:24 gra357 Coach[27139] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.535
+2024-03-04 10:20:24 gra357 Coach[27005] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.683
+2024-03-04 10:20:24 gra357 MCTS[27137] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.961
+2024-03-04 10:20:24 gra357 MCTS[27158] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.038
+2024-03-04 10:20:24 gra357 Coach[27137] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.515
+2024-03-04 10:20:24 gra357 Coach[27158] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.57
+2024-03-04 10:20:24 gra357 MCTS[27149] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.955
+2024-03-04 10:20:24 gra357 Coach[27149] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.772
+2024-03-04 10:20:25 gra357 MCTS[27181] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.991
+2024-03-04 10:20:25 gra357 Coach[27181] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.77
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:25 gra357 MCTS[27219] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.939
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:26 gra357 MCTS[27235] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.933
+2024-03-04 10:20:26 gra357 Coach[27219] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.741
+2024-03-04 10:20:26 gra357 Coach[27235] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.602
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:27 gra357 MCTS[27296] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.965
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:27 gra357 Coach[27296] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.6
+2024-03-04 10:20:27 gra357 MCTS[27341] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.997
+2024-03-04 10:20:28 gra357 Coach[27341] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.542
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:28 gra357 MCTS[27363] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.007
+2024-03-04 10:20:28 gra357 Coach[27363] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.539
+2024-03-04 10:20:29 gra357 MCTS[27384] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.818
+2024-03-04 10:20:29 gra357 Coach[27384] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.672
+2024-03-04 10:20:30 gra357 MCTS[27392] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.902
+2024-03-04 10:20:30 gra357 Coach[27392] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.409
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:34 gra357 MCTS[27448] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.971
+2024-03-04 10:20:35 gra357 Coach[27448] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.47
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:20:41 gra357 MCTS[27496] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  0.86
+2024-03-04 10:20:42 gra357 Coach[27496] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.699
+2024-03-04 10:20:49 gra357 MCTS[3548] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  722.342
+2024-03-04 10:21:07 gra357 Coach[3548] INFO Saved cubes to file
+Reward:  0.006677229515617927
+Tool runtime:  963.153
+2024-03-04 10:21:29 gra357 MCTS[20757] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  174.665
+2024-03-04 10:21:30 gra357 Coach[20757] INFO Saved cubes to file
+Reward:  0.05401765504753282
+Tool runtime:  266.627
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:00 gra357 MCTS[27821] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.003
+2024-03-04 10:22:00 gra357 MCTS[27822] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.014
+2024-03-04 10:22:00 gra357 Coach[27822] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.542
+2024-03-04 10:22:01 gra357 Coach[27821] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.637
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:18 gra357 MCTS[28113] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.875
+2024-03-04 10:22:18 gra357 MCTS[28109] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.858
+2024-03-04 10:22:18 gra357 Coach[28113] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.038
+2024-03-04 10:22:18 gra357 Coach[28109] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.878
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:23 gra357 MCTS[28923] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.925
+2024-03-04 10:22:23 gra357 MCTS[28961] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.96
+2024-03-04 10:22:23 gra357 Coach[28961] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.514
+2024-03-04 10:22:23 gra357 MCTS[28900] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.887
+2024-03-04 10:22:23 gra357 Coach[28923] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.676
+2024-03-04 10:22:23 gra357 Coach[28900] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.536
+2024-03-04 10:22:24 gra357 MCTS[28926] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.931
+2024-03-04 10:22:24 gra357 Coach[28926] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.727
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:52 gra357 MCTS[30750] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.988
+2024-03-04 10:22:52 gra357 MCTS[30742] WARNING NO EXPLORATION!!!!
+2024-03-04 10:22:52 gra357 MCTS[30747] WARNING NO EXPLORATION!!!!
+2024-03-04 10:22:52 gra357 MCTS[30741] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.005
+Time taken for cubing:  2.002
+Time taken for cubing:  2.008
+2024-03-04 10:22:53 gra357 Coach[30750] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.173
+2024-03-04 10:22:53 gra357 Coach[30742] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.003
+2024-03-04 10:22:53 gra357 Coach[30741] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.885
+2024-03-04 10:22:53 gra357 MCTS[30748] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.842
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:53 gra357 Coach[30747] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.386
+2024-03-04 10:22:53 gra357 Coach[30748] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.32
+2024-03-04 10:22:55 gra357 MCTS[30870] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.83
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:55 gra357 Coach[30870] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.225
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:22:57 gra357 MCTS[30916] WARNING NO EXPLORATION!!!!
+2024-03-04 10:22:57 gra357 MCTS[30914] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.042
+2024-03-04 10:22:57 gra357 MCTS[30913] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.026
+2024-03-04 10:22:57 gra357 MCTS[30912] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.968
+Time taken for cubing:  2.125
+2024-03-04 10:22:57 gra357 Coach[30914] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.002
+2024-03-04 10:22:57 gra357 Coach[30913] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.217
+2024-03-04 10:22:57 gra357 Coach[30912] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.028
+2024-03-04 10:22:57 gra357 Coach[30916] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.379
+2024-03-04 10:22:58 gra357 MCTS[30917] WARNING NO EXPLORATION!!!!
+2024-03-04 10:22:57 gra357 MCTS[30915] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.022
+Time taken for cubing:  2.104
+2024-03-04 10:22:58 gra357 Coach[30915] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.926
+2024-03-04 10:22:58 gra357 Coach[30917] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  5.103
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:00 gra357 MCTS[30980] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.018
+2024-03-04 10:23:00 gra357 Coach[30980] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.858
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:00 gra357 MCTS[30990] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.051
+2024-03-04 10:23:01 gra357 MCTS[30991] WARNING NO EXPLORATION!!!!
+2024-03-04 10:23:01 gra357 Coach[30990] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.769
+Time taken for cubing:  2.097
+2024-03-04 10:23:01 gra357 Coach[30991] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.699
+2024-03-04 10:23:01 gra357 MCTS[31035] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.986
+2024-03-04 10:23:01 gra357 Coach[31035] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.743
+2024-03-04 10:23:02 gra357 MCTS[31034] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.041
+2024-03-04 10:23:02 gra357 Coach[31034] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.701
+2024-03-04 10:23:02 gra357 MCTS[31036] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.066
+2024-03-04 10:23:02 gra357 Coach[31036] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.806
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:05 gra357 MCTS[31067] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.094
+2024-03-04 10:23:05 gra357 Coach[31067] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.786
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:08 gra357 MCTS[31117] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.995
+2024-03-04 10:23:08 gra357 Coach[31117] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.59
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:14 gra357 MCTS[31226] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.689
+2024-03-04 10:23:15 gra357 Coach[31226] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  3.927
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:17 gra357 MCTS[31258] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.923
+2024-03-04 10:23:17 gra357 Coach[31258] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.251
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:25 gra357 MCTS[31320] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  1.95
+2024-03-04 10:23:26 gra357 Coach[31320] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.653
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+Solving the KS system of order  28  with  0  constraints
+378 variables will be considered for cubing
+2024-03-04 10:23:58 gra357 MCTS[1148] WARNING NO EXPLORATION!!!!
+2024-03-04 10:23:58 gra357 MCTS[1152] WARNING NO EXPLORATION!!!!
+Time taken for cubing:  2.004
+Time taken for cubing:  2.04
+2024-03-04 10:23:58 gra357 Coach[1148] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.698
+2024-03-04 10:23:58 gra357 Coach[1152] INFO Saved cubes to file
+Reward:  0.0003395201448619285
+Tool runtime:  4.784
