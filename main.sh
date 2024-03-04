@@ -125,7 +125,7 @@ case $solve_mode in
         ;;
     "par_cubing")
         echo "Cubing and solving in parallel on Compute Canada"
-        #python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
+        python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
 
         # Populate the array with the names of files found by the find command
@@ -163,7 +163,7 @@ case $solve_mode in
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=0
-#SBATCH --time=1-00:00
+#SBATCH --time=5-00:00
 #SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
 #module load python/3.10
@@ -189,3 +189,4 @@ EOF
 
         ;;
 esac
+echo 'complete'
