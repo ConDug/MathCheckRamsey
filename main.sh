@@ -131,13 +131,9 @@ case $solve_mode in
         # Populate the array with the names of files found by the find command
         while IFS= read -r -d $'\0' file; do
         found_files+=("$file")
-	done < <(find ${di} ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
-        #done < <(find . -regextype posix-extended -regex "./${di}/$cnf_${t}_${m}_${d}_${dv}_${nodes}[^/]*" ! -regex '.*\.(simplog|ext)$' -print0)
-
-        #use only first 50 cubes
+	done < <(find "${di}" -mindepth 1 ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
         #found_files=("${found_files[@]:0:50}")
-	echo $found_files
-
+	#echo $found_files
 
         # Calculate the number of files to distribute names across and initialize counters
         total_files=${#found_files[@]}
