@@ -100,7 +100,7 @@ def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, ext
     subprocess.run(['rm', '-f', file_to_cube], check=True)
     os.rename(f"{file_to_cube}.simp", rename_file(file_to_cube))
     file_to_cube = rename_file(file_to_cube)
-
+    print(file_to_cube)
     if cutoff == 'd':
         if d >= cutoffv:
             if solveaftercubeg == 'True':
