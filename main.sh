@@ -13,9 +13,8 @@ Usage:
 
 Options:
     -n: No cubing, just solve
-    -s: Cubing with sequential solving
-    -l: Cubing with parallel solving
-    [-p]: cubing/solving in parallel
+    -s: Cubing with parallel solving on one node
+    -l: Cubing with parallel solving across different nodes
     [-d]: lower bound on number of (colour 1) edges
     [-D]: upper bound on number of (colour 1) edges
     [-E]: upper bound on number of monochromatic triangles on a colour 1 edges
@@ -23,9 +22,10 @@ Options:
     <n>: the order of the instance/number of vertices in the graph
     <p>: colour 1 cliques to block in encoding
     <q>: colour 2 cliques to block in encoding
-    <t>: conflicts for which to simplify each time CaDiCal is called
-    <r>: number of variable to remove in cubing, if not passed in, assuming no cubing needed
-    <a>: amount of additional variables to remove for each cubing call
+    <m>: Number of MCTS simulations (default: 2)
+    <d>: Cubing cutoff criteria, choose d(depth) as default #d, v (default: d)
+    <dv>: By default cube to depth 5 (default: 5)
+    <nodes>: Number of nodes to submit to if using -l (default: 1)
 " && exit
 
 
@@ -33,8 +33,8 @@ while getopts "nsld:D:E:F:P" opt
 do
     case $opt in
         n) solve_mode="no_cubing" ;;
-        s) solve_mode="seq_cubing" ;;
-        l) solve_mode="par_cubing" ;;
+        s) solve_mode="sin_cubing" ;;
+        l) solve_mode="mul_cubing" ;;
         d) lower=${OPTARG} ;; #lower bound on degree of blue vertices
         D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
         E) Edge_b=${OPTARG} ;; #upper bound on blue triangles per blue edge
@@ -118,11 +118,11 @@ case $solve_mode in
         echo "Solving $f using MapleSAT+CAS"
         ./solve-verify.sh $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp
         ;;
-    "seq_cubing")
+    "sin_cubing")
         echo "Cubing and solving in parallel on local machine"
         python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv
         ;;
-    "par_cubing")
+    "mul_cubing")
         echo "Cubing and solving in parallel on Compute Canada"
         python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()

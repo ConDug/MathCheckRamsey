@@ -1,10 +1,9 @@
 #!/bin/bash
 #SBATCH --account=def-vganesh
-#SBATCH --time=36:00:00
-####SBATCH --mem-per-cpu=4G
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
+#SBATCH --time=23:00:00
+#SBATCH --cpus-per-task=32
 #SBATCH --mem=0
+#SBATCH --ntasks-per-node=1
 #SBATCH --constraint=broadwell
 
 while getopts "nsld:D:E:F:P" opt
@@ -39,7 +38,9 @@ fi
 if [[ ! -v Edge_r ]]; then
     Edge_r=0
 fi
-
+# --mem-per-cpu=4G
+#--nodes=1
+# --mem=0
 
 n=$1 #order
 p=$2
