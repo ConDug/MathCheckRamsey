@@ -64,7 +64,7 @@ fi
 
 if [[ ! -v mpcf ]]; then
     mpcf=0
-
+fi
 #step 1: input parameters
 if [ -z "$1" ]
 then
@@ -84,10 +84,10 @@ nodes=${8:-1} #Number of nodes to submit to if using -l
 
 #step 2: setp up dependencies
 ./dependency-setup.sh
-di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}_l"
+di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}_${solve_mode}"
 mkdir -p $di
 cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
-echo $cnf
+echo $di
 #step 3 and 4: generate pre-processed instance
 
 if [ -f ${cnf}_${t}_${m}_${d}_${dv}_${nodes}_final.simp.log ]
@@ -105,6 +105,7 @@ else
     python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
     cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
 fi
+
 echo $solve_mode
 cp ${cnf}_${t}_${m}_${d}_${dv}_${nodes} $di
 # Solve Based on Mode
@@ -184,4 +185,3 @@ EOF
 
         ;;
 esac
-echo 'complete'
