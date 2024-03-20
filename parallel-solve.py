@@ -68,9 +68,9 @@ def worker(queue):
         queue.task_done()
 
 def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, extension="False"):
-    print('t1')
-    command = f"./simplification/simplify-by-conflicts.sh -s {file_to_cube} {order} 10000 | tee {file_to_cube}.simplog"
-    print('t2')
+    #print('t1')
+    command = f"./simplification/simplify-by-conflicts.sh -s {file_to_cube} {order} 10000"
+    #print('t2')
     # Run the command and capture the output
     print(command)
     result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -85,10 +85,10 @@ def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, ext
         print("the cube is UNSAT")
         return
 
-    if file_to_cube != file_name_solveg:
-        previous_ext = file_to_cube[:-1] + ".ext"
-        command = f'cat {previous_ext} >> {file_to_cube}.ext'
-        subprocess.run(command, shell=True)
+    #if file_to_cube != file_name_solveg:
+    #    previous_ext = file_to_cube[:-1] + ".ext"
+    #    command = f'cat {previous_ext} >> {file_to_cube}.ext'
+    #    subprocess.run(command, shell=True)
 
     command = f"sed -E 's/.* 0 [-]*([0-9]*) 0$/\\1/' < {file_to_cube}.ext | awk '$0<={mg}' | sort | uniq | wc -l"
 
