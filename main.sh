@@ -77,8 +77,8 @@ p=$2
 q=$3
 t=${4:-100000} #conflicts for which to simplify each time CaDiCal is called, or % of variables to eliminate
 m=${5:-2} #Num of MCTS simulations. m=0 activate march
-d=${6:-d} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
-dv=${7:-5} #By default cube to depth 5
+d=${6:-v} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
+dv=${7:-50} #By default cube to depth 5
 nodes=${8:-1} #Number of nodes to submit to if using -l
 
 
