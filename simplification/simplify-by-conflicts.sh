@@ -38,9 +38,9 @@ i=1
 
 # Check if "exit 20" is in the log
 if [ "$s" != "true" ]; then
-   echo "verifying the simplification now..."
-   if grep -q "exit 20" "$f_dir".simplog; then
-   echo "CaDiCaL returns UNKSAT, using backward proof checking..."
+  echo "verifying the simplification now..."
+  if grep -q "exit 20" "$f_dir".simplog; then
+    echo "CaDiCaL returns UNSAT, using backward proof checking..."
     ./drat-trim/drat-trim "$f_dir" "$f_dir.drat" | tee "$f_dir".verify
   else
     echo "CaDiCaL returns UNKNOWN, using forward proof checking..."

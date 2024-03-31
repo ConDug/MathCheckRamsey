@@ -1,6 +1,7 @@
 import subprocess
 import multiprocessing
 import os
+import queue
 
 def run_command(command):
     process_id = os.getpid()
@@ -21,7 +22,7 @@ def run_command(command):
             process.terminate()
         else:
             print("Continue cubing this subproblem...")
-            command = f"cube('{file_to_cube}', {mg}, '{orderg}', {numMCTSg}, queue, '{cutoffg}', {cutoffvg}, {dg}, 'True')"
+            command = f"cube('{file_to_cube}', 'N', 0, {mg}, '{orderg}', {numMCTSg}, queue, '{cutoffg}', {cutoffvg}, {dg}, 'True')"
             queue.put(command)
 
     except Exception as e:
@@ -67,31 +68,26 @@ def worker(queue):
             run_cube_command(args)
         queue.task_done()
 
-def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, extension="False"):
-    #print('t1')
-    command = f"./simplification/simplify-by-conflicts.sh -s {file_to_cube} {order} 10000"
-    #print('t2')
-    # Run the command and capture the output
-    print(command)
-    result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-    # Decode the output and error to utf-8
-    output = result.stdout.decode('utf-8') + result.stderr.decode('utf-8')
+def cube(original_file, cube, index, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, extension="False"):
+    if cube != "N":
+        command = f"./gen_cubes/apply.sh {original_file} {cube} {index} > {cube}{index}.cnf && ./simplification/simplify-by-conflicts.sh -s {cube}{index}.cnf {order} 10000"
+        file_to_cube = f"{cube}{index}.cnf.simp"
+        simplog_file = f"{cube}{index}.cnf.simplog"
+        file_to_check = f"{cube}{index}.cnf.ext"
+    else:
+        command = f"./simplification/simplify-by-conflicts.sh -s {original_file} {order} 10000"
+        file_to_cube = f"{original_file}.simp"
+        simplog_file = f"{original_file}.simplog"
+        file_to_check = f"{original_file}.ext"
+    subprocess.run(command, shell=True)
 
     # Check if the output contains "c exit 20"
-    if "c exit 20" in output:
-        os.remove(file_to_cube)
-        os.remove(f'{file_to_cube}.simp')
-        print("the cube is UNSAT")
-        return
-
-    #if file_to_cube != file_name_solveg:
-    #    previous_ext = file_to_cube[:-1] + ".ext"
-    #    command = f'cat {previous_ext} >> {file_to_cube}.ext'
-    #    subprocess.run(command, shell=True)
-
-    command = f"sed -E 's/.* 0 [-]*([0-9]*) 0$/\\1/' < {file_to_cube}.ext | awk '$0<={mg}' | sort | uniq | wc -l"
-
+    with open(simplog_file, "r") as file:
+        if "c exit 20" in file.read():
+            print("the cube is UNSAT")
+            return
+    
+    command = f"sed -E 's/.* 0 [-]*([0-9]*) 0$/\\1/' < {file_to_check} | awk '$0<={m}' | sort | uniq | wc -l"
     result = subprocess.run(command, shell=True, text=True, capture_output=True)
     var_removed = int(result.stdout.strip())
     if extension == "True":
@@ -99,10 +95,6 @@ def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, ext
 
     print (f'{var_removed} variables removed from the cube')
 
-    subprocess.run(['rm', '-f', file_to_cube], check=True)
-    os.rename(f"{file_to_cube}.simp", rename_file(file_to_cube))
-    file_to_cube = rename_file(file_to_cube)
-    print(file_to_cube)
     if cutoff == 'd':
         if d >= cutoffv:
             if solveaftercubeg == 'True':
@@ -115,17 +107,16 @@ def cube(file_to_cube, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, ext
                 command = f"./solve-verify.sh {order} {file_to_cube}"
                 queue.put(command)
             return
-    if int(numMCTS) == 0:
-        subprocess.run(f"./gen_cubes/march_cu/march_cu {file_to_cube} -o {file_to_cube}.cubes -d 1 -m {m}", shell=True)
-    else:
-        subprocess.run(f"python -u alpha-zero-general/main.py {file_to_cube} -d 1 -m {m} -o {file_to_cube}.cubes -order {order} -prod -numMCTSSims {numMCTS}", shell=True)
-    subprocess.run(f"./gen_cubes/apply.sh {file_to_cube} {file_to_cube}.cubes 1 > {file_to_cube}{0}", shell=True)
-    subprocess.run(f"./gen_cubes/apply.sh {file_to_cube} {file_to_cube}.cubes 2 > {file_to_cube}{1}", shell=True)
-    subprocess.run(['rm', '-f', file_to_cube], check=True)
-    #subprocess.run(['rm', '-f', file_to_cube + ".cubes"], check=True)
+    subprocess.run(f"python3 -u alpha-zero-general/main.py {file_to_cube} -d 1 -m {m} -o {file_to_cube}.temp -order {order} -prod -numMCTSSims {numMCTS}", shell=True)
     d += 1
-    command1 = f"cube('{file_to_cube}{0}', {m}, '{order}', {numMCTS}, queue, '{cutoff}', {cutoffv}, {d})"
-    command2 = f"cube('{file_to_cube}{1}', {m}, '{order}', {numMCTS}, queue, '{cutoff}', {cutoffv}, {d})"
+    if cube != "N":
+        subprocess.run(f'''sed -E "s/^a (.*)/$(head -n {index} {cube} | tail -n 1 | sed -E 's/(.*) 0/\\1/') \\1/" {file_to_cube}.temp > {cube}{index}''', shell=True)
+        next_cube = f'{cube}{index}'
+    else:
+        subprocess.run(f'mv {file_to_cube}.temp {original_file}0', shell=True)
+        next_cube = f'{original_file}0'
+    command1 = f"cube('{original_file}', '{next_cube}', 1, {m}, '{order}', {numMCTS}, queue, '{cutoff}', {cutoffv}, {d})"
+    command2 = f"cube('{original_file}', '{next_cube}', 2, {m}, '{order}', {numMCTS}, queue, '{cutoff}', {cutoffv}, {d})"
     queue.put(command1)
     queue.put(command2)
 
@@ -152,7 +143,7 @@ def main(order, file_name_solve, numMCTS=2, cutoff='d', cutoffv=5, solveaftercub
         # Check if the first line starts with 'p cnf'
         if first_line.startswith('p cnf'):
             print("input file is a CNF file")
-            cube(file_name_solve, m, order, numMCTS, queue, cutoff, cutoffv, d)
+            cube(file_name_solve, "N", 0, m, order, numMCTS, queue, cutoff, cutoffv, d)
         else:
             print("input file contains name of multiple CNF file, solving them first")
             # Prepend the already read first line to the list of subsequent lines
