@@ -157,8 +157,8 @@ case $solve_mode in
 #SBATCH --account=def-vganesh
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=0
+#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=4G
 #SBATCH --time=2-12:00
 #SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
