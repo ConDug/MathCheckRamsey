@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-vganesh
-#SBATCH --time=48:00:00
+#SBATCH --time=40:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem-per-cpu=4G
 #SBATCH --ntasks-per-node=1
