@@ -5,7 +5,7 @@
 #SBATCH --mem-per-cpu=4G
 #SBATCH --ntasks-per-node=1
 #SBATCH --constraint=broadwell
-
+#SBATCH --nodes=1
 while getopts "nsld:D:E:F:P" opt
 do
     case $opt in

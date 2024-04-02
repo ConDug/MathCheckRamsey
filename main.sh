@@ -125,7 +125,7 @@ case $solve_mode in
         ;;
     "mul_cubing")
         echo "Cubing and solving in parallel on Compute Canada"
-        python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
+        #python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
 
         # Populate the array with the names of files found by the find command
@@ -134,7 +134,7 @@ case $solve_mode in
         found_files+=("$file")
 	#old
 	#done < <(find "${di}" -mindepth 1 ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
-        done < <(find "${di}" -mindepth 1 -regex ".*\.\(00\|01\|10\|11\)$" -print0)
+        done < <(find "${di}" -mindepth 1 -regex ".*\.\(11\|12\|21\|22\)$" -print0)
 
         # Calculate the number of files to distribute names across and initialize counters
         total_files=${#found_files[@]}
@@ -173,7 +173,7 @@ python parallel-solve.py $n $output_file $m $d $dv
 EOF
             
             # Write the current file name to the output file
-            echo "$file_name" >> "$output_file"
+            echo "${file_name}.cnf" >> "$output_file"
             
             # Update counters
             ((counter++))
