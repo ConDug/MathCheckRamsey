@@ -128,10 +128,10 @@ case $solve_mode in
         ;;
     "mul_cubing")
         echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
-        #./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
-	#mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
+        ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
+	mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
         echo "Cubing and solving in parallel on Compute Canada"
-        #python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
+        python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
 
         # Populate the array with the names of files found by the find command
@@ -165,9 +165,9 @@ case $solve_mode in
 #SBATCH --account=def-vganesh
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=16
 #SBATCH --mem-per-cpu=4G
-#SBATCH --time=2-12:00
+#SBATCH --time=3-00:00
 #SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
 #module load python/3.10
