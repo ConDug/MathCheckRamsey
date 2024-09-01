@@ -4,8 +4,8 @@
 
 [ "$1" = "-h" -o "$1" = "--help" ] && echo "
 Description:
-    Updated on 2023-12-19
-    This is a driver script that handles generating the SAT encoding, solve the instance using CaDiCaL, then finally determine if a KS system exists for a certain order.
+    Updated on 2024-09-01
+    This is a driver script that handles generating the SAT encoding, simplifying the instance using CaDiCaL, then cubing if directed and finally solving.
 
 Usage:
     ./main.sh [-p] n r a
@@ -124,7 +124,7 @@ case $solve_mode in
         ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
 	mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
         echo "Cubing and solving in parallel on local machine"
-        python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv
+        python3 parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv
         ;;
     "mul_cubing")
         echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
@@ -170,11 +170,11 @@ case $solve_mode in
 #SBATCH --time=3-00:00
 #SBATCH --output=${di}/node_${file_counter}_%N_%j.out
 
+# Following 3 lines due to our server requirements. Replace as needed.
 #module load python/3.10
-module load python/3.10
+#module load scipy-stack
+#source ENV/bin/activate
 
-module load scipy-stack
-source ENV/bin/activate
 python parallel-solve.py $n $output_file $m $d $dv
 
 EOF

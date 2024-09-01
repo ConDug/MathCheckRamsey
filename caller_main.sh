@@ -16,7 +16,7 @@ do
         D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
         E) Edge_b=${OPTARG} ;; #upper bound on triangles per blue edge
         F) Edge_r=${OPTARG} ;; #upper bound on triangles per red edge
-        P) mpcf="-P" ;;
+        P) mpcf="-P" ;; # include maximum p-clique free constraints
         *) echo "Invalid option: -$OPTARG. Only -p and -m are supported. Use -h or --help for help" >&2
            exit 1 ;;
     esac
@@ -38,9 +38,6 @@ fi
 if [[ ! -v Edge_r ]]; then
     Edge_r=0
 fi
-# --mem-per-cpu=4G
-#--nodes=1
-# --mem=0
 
 n=$1 #order
 p=$2
@@ -51,13 +48,9 @@ d=${6:-d} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
 dv=${7:-5} #By default cube to depth 5
 nodes=${8:-1} #Number of nodes to submit to if using -l
 
-module load python/3.10
+#Following 3 lines due to our server requirements. Replace as needed
+#module load python/3.10
+#module load scipy-stack
+#source ENV/bin/activate
 
-module load scipy-stack
-source ENV/bin/activate
-#pip install tqdm --no-index
-#pip install rl_coach
-#pip install coloredlogs --no-index
-#pip install wandb --no-index
-#pip install argparse --no-index
 ./main.sh ${t1} "-d" $lower "-D" $upper "-E" $Edge_b "-F" $Edge_r $mpcf $n $p $q $t $m $d ${dv} $nodes

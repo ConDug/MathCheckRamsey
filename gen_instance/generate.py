@@ -36,13 +36,10 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
 
 
     count,clause_count= cubic(n, math.comb(n,2),f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}") # write cubic constraints to file and count their total variables, and num_cubic constriants
-    #clause_count =0
-    #count=math.comb(n,2)
-    #print(count,clause_count)
     
     if lower>0:
         for i in range(1,n+1):
-            deg_count,deg_clause=generate_degree_clauses([edge_dict[key] for key in edge_dict if i in key],lower,upper,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+            deg_count,deg_clause=generate_edge_clauses([edge_dict[key] for key in edge_dict if i in key],lower,upper,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
             print(deg_count)
             clause_count +=deg_clause
             count=deg_count #+= built into generate_degree_clauses
@@ -72,12 +69,11 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
         MPCF='MPCF'
     else:
         MPCF=0
-   
-    print('80 edges') 
-    #edge_count,edge_clause=generate_degree_clauses(list(range(1,math.comb(n,2)+1)),61,61,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-    edge_count,edge_clause=generate_edge_clauses(list(range(1,math.comb(n,2)+1)),80,80,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-    clause_count +=edge_clause
-    count=edge_count
+    #These lines are hardcoded in for the edge cardinality constraints. Uncomment all lines to enable
+    #print('80 edges lower, 80 edges upper') 
+    #edge_count,edge_clause=generate_edge_clauses(list(range(1,math.comb(n,2)+1)),80,80,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+    #clause_count +=edge_clause
+    #count=edge_count
 
     count=str(count)
     clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
