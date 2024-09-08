@@ -1,6 +1,25 @@
 # MathCheckRamsey: Ramsey Graph Generation and Verification
 
-This repository contains a collection of scripts and tools for generating, solving, and verifying Ramsey graph problems using SAT solvers and Computer Algebra Systems (CAS).
+This repository contains a collection of scripts and tools for generating, solving, and verifying Ramsey graph problems using SAT solvers and Computer Algebra Systems (CAS). 
+
+## Prerequisites
+
+- Linux-based operating system
+- Python 3.7+
+- C++ compiler (GCC or Clang)
+- [List any other required software or libraries]
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/ConDug/MathCheckRamsey.git
+   cd MathCheckRamsey
+   ```
+2. Run the dependency setup script:
+   ```
+   ./dependency-setup.sh
+   ```
 
 ## Components
 
@@ -29,5 +48,3 @@ This repository contains a collection of scripts and tools for generating, solvi
 
 1. Run `./dependency-setup.sh` to set up MapleSAT-ks, CaDiCaL-ks, and AlphaMapleSAT.
 2. Execute `./main.sh n` to run the entire pipeline for a graph of order n.
-
-For more detailed information on each component and script, refer to the individual directories and script documentation.
