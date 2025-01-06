@@ -9,7 +9,17 @@ FILE * exhaustfile = NULL;
 FILE * musoutfile = NULL;
 
 // The kth entry estimates the number of permuations needed to show canonicity in order (k+1)
-long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 20, 50, 125, 313, 783, 1958, 4895, 12238, 30595, 76488, 191220, 478050, 1195125, 2987813, 7469533, 18673833, 46684583};
+
+//KS
+//long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 20, 50, 125, 313, 783, 1958, 4895, 12238, 30595, 76488, 191220, 478050, 1195125, 2987813, 7469533, 18673833, 46684583};
+
+//Ramsey
+//complete canonicity check for first 12 orders
+//then we take the median for 13 - 21
+//then the 25th percentile for 22 - n
+long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1148085, 2133135, 3457047, 5647909, 9309889, 8769562, 13637359, 23203580, 34246261, 44297171, 18118283, 16210665};
+
+
 long canon = 0;
 long noncanon = 0;
 double canontime = 0;
@@ -419,8 +429,8 @@ bool SymmetryBreaker::is_canonical(int k, int p[], int& x, int& y, int& i, bool 
     int limit = INT32_MAX;
 
     // If pseudo-test enabled then stop test if it is taking over 10 times longer than average
-    if(opt_pseudo_test && k >= 7) {
-        limit = 10*perm_cutoff[k-1];
+    if(opt_pseudo_test && k >= 12) {
+        limit = perm_cutoff[k-1];
     }
 
     while(np < limit) {
