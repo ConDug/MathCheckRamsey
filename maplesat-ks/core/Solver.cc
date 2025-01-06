@@ -545,7 +545,12 @@ Lit Solver::pickBranchLit()
 #define MIN(X,Y) ((X) > (Y)) ? (Y) : (X)
 
 // The kth entry estimates the number of permuations needed to show canonicity in order (k+1)
-long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 20, 50, 125, 313, 783, 1958, 4895, 12238, 30595, 76488, 191220, 478050, 1195125, 2987813, 7469533, 18673833, 46684583};
+// KS
+// long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 20, 50, 125, 313, 783, 1958, 4895, 12238, 30595, 76488, 191220, 478050, 1195125, 2987813, 7469533, 18673833, 46684583};
+
+// Ramsey
+long perm_cutoff[MAXORDER] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1148085, 2133135, 3457047, 5647909, 9309889, 8769562, 13637359, 23203580, 34246261, 44297171, 18118283, 16210665};
+
 
 // Returns true when the k-vertex subgraph (with adjacency matrix M) is canonical
 // M is determined by the current assignment to the first k*(k-1)/2 variables
@@ -566,8 +571,8 @@ bool Solver::is_canonical(int k, int p[], int& x, int& y, int& i) {
     int limit = INT32_MAX;
 
     // If pseudo-test enabled then stop test if it is taking over 10 times longer than average
-    if(opt_pseudo_test && k >= 7) {
-        limit = 10*perm_cutoff[k-1];
+    if(opt_pseudo_test && k >= 12) {
+        limit = perm_cutoff[k-1];
     }
 
     while(np < limit) {
