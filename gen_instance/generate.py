@@ -4,12 +4,12 @@ from cubic import cubic
 import math
 import csv
 import subprocess
-from degree_constraints import generate_degree_clauses
+from degree_constraints import generate_degree_clauses #sinz sequential
 from triangle_constraints import generate_triangle_clauses
 from min_pclique_free import max_pclique_free
-from b_b_card import generate_edge_clauses
+from b_b_card import generate_edge_clauses #totalizer
 #requires that the cnf file does not exist
-def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
+def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sinz", edge_card_type="sinz", edge_lb=0, edge_ub=0):
 
     vertices=range(1,n+1)
     edge_dict={}
@@ -39,10 +39,12 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
     
     if lower>0:
         for i in range(1,n+1):
-            deg_count,deg_clause=generate_edge_clauses([edge_dict[key] for key in edge_dict if i in key],lower,upper,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-            print(deg_count)
-            clause_count +=deg_clause
-            count=deg_count #+= built into generate_degree_clauses
+            if card_type == "sinz":
+                deg_count, deg_clause = generate_degree_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+            else:  # totalizer
+                deg_count, deg_clause = generate_edge_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+            clause_count += deg_clause
+            count = deg_count
 
     if u_e_b>0:
         print('blue triangle constraints')
@@ -69,11 +71,15 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
         MPCF='MPCF'
     else:
         MPCF=0
-    #These lines are hardcoded in for the edge cardinality constraints. Uncomment all lines to enable
-    #print('80 edges lower, 80 edges upper') 
-    #edge_count,edge_clause=generate_edge_clauses(list(range(1,math.comb(n,2)+1)),80,80,count,f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-    #clause_count +=edge_clause
-    #count=edge_count
+
+    # Add edge cardinality constraints if bounds are specified
+    if edge_lb > 0 or edge_ub > 0:
+        if edge_card_type == "sinz":
+            edge_count, edge_clause = generate_degree_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+        else:  # totalizer
+            edge_count, edge_clause = generate_edge_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+        clause_count += edge_clause
+        count = edge_count
 
     count=str(count)
     clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
@@ -83,4 +89,17 @@ def generate(n, p, q,lower=0,upper=0, u_e_b=0, u_e_r=0,mpcf=0):
 
 
 if __name__ == "__main__":
-    generate(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]),int(sys.argv[4]),int(sys.argv[5]),int(sys.argv[6]),int(sys.argv[7]),sys.argv[8])
+    generate(
+        int(sys.argv[1]), 
+        int(sys.argv[2]), 
+        int(sys.argv[3]),
+        int(sys.argv[4]),
+        int(sys.argv[5]),
+        int(sys.argv[6]),
+        int(sys.argv[7]),
+        sys.argv[8],
+        sys.argv[9],
+        sys.argv[10],
+        int(sys.argv[11]),
+        int(sys.argv[12])
+    )
