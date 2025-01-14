@@ -51,6 +51,12 @@ deg_card_type="sinz"
 edge_card_type="sinz"
 edge_lb=0
 edge_ub=0
+solve_mode=""
+lower=0
+upper=0
+Edge_b=0
+Edge_r=0
+mpcf=0
 
 # Modify the getopts section to handle new parameters
 while [ $# -gt 0 ]; do
@@ -73,24 +79,6 @@ while [ $# -gt 0 ]; do
     shift
 done
 
-if [ -z "${lower+x}" ]; then
-    lower=0
-fi
-if [ -z "${upper+x}" ]; then
-    upper=0
-fi
-
-if [ -z "${Edge_b+x}" ]; then
-    Edge_b=0
-fi
-
-if [ -z "${Edge_r+x}" ]; then
-    Edge_r=0
-fi
-
-if [ -z "${mpcf+x}" ]; then
-    mpcf=0
-fi
 #step 1: input parameters
 if [ -z "$1" ]
 then

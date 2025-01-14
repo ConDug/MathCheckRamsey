@@ -57,6 +57,12 @@ deg_card_type="sinz"
 edge_card_type="sinz"
 edge_lb=0
 edge_ub=0
+t1=""
+lower=0
+upper=0
+Edge_b=0
+Edge_r=0
+mpcf=""
 
 # Parse command line arguments
 while [ $# -gt 0 ]; do
@@ -78,23 +84,6 @@ while [ $# -gt 0 ]; do
     esac
     shift
 done
-
-# Add these variable checks after the argument parsing
-if [ -z "${lower+x}" ]; then
-    lower=0
-fi
-if [ -z "${upper+x}" ]; then
-    upper=0
-fi
-if [ -z "${Edge_b+x}" ]; then
-    Edge_b=0
-fi
-if [ -z "${Edge_r+x}" ]; then
-    Edge_r=0
-fi
-if [ -z "${mpcf+x}" ]; then
-    mpcf=0
-fi
 
 # Get positional arguments
 n=$1 #order
