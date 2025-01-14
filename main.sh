@@ -1,68 +1,94 @@
 #!/bin/bash
 
-# Ensure parameters are specified on the command-line
-
 [ "$1" = "-h" -o "$1" = "--help" ] && echo "
 Description:
-    Updated on 2024-09-01
-    This is a driver script that handles generating the SAT encoding, simplifying the instance using CaDiCaL, then cubing if directed and finally solving.
+    Updated on 2024-03-19
+    This is a driver script that handles generating the SAT encoding, simplifying the instance using CaDiCaL, 
+    then cubing if directed and finally solving.
 
 Usage:
-    ./main.sh [-p] n r a
-    If only parameter n is provided, default run ./main.sh n 0 0
+    ./main.sh [options] n p q [t m d dv nodes]
+
+Example:
+    # Search for R(3,7) on 23 vertices with vertex degrees between 5 and 6
+    ./main.sh -n -d 5 -D 6 23 3 7
+    
+    # Same search but using totalizer encoding for degree constraints
+    ./main.sh -n -d 5 -D 6 --deg-card totalizer 23 3 7
+    
+    # Using different encodings for vertex degrees and edge count constraints
+    ./main.sh -n -d 5 -D 6 --deg-card totalizer --edge-lb 80 --edge-ub 85 --edge-card sinz 23 3 7
+
+Required Arguments:
+    n               Number of vertices in the graph
+    p               Number of colour 1 cliques to block in encoding
+    q               Number of colour 2 cliques to block in encoding
+
+Optional Arguments:
+    t               Conflicts for simplification (default: 100000)
+    m               Number of MCTS simulations (default: 2)
+    d               Cubing cutoff criteria: d(depth), n, or v (default: d)
+    dv              Cubing depth value (default: 50)
+    nodes           Number of nodes for parallel solving (default: 1)
 
 Options:
-    -n: No cubing, just solve
-    -s: Cubing with parallel solving on one node
-    -l: Cubing with parallel solving across different nodes
-    [-d]: lower bound on number of (colour 1) edges
-    [-D]: upper bound on number of (colour 1) edges
-    [-E]: upper bound on number of monochromatic triangles on a colour 1 edges
-    [-F]: upper bound on number of monochromatic triangles on a colour 2 edges
-    <n>: the order of the instance/number of vertices in the graph
-    <p>: colour 1 cliques to block in encoding
-    <q>: colour 2 cliques to block in encoding
-    <m>: Number of MCTS simulations (default: 2)
-    <d>: Cubing cutoff criteria, choose d(depth) as default #d, v (default: d)
-    <dv>: By default cube to depth 5 (default: 5)
-    <nodes>: Number of nodes to submit to if using -l (default: 1)
+    -n              No cubing, just solve
+    -s              Cubing with parallel solving on one node
+    -l              Cubing with parallel solving across different nodes
+    -d INT          Lower bound on number of (colour 1) edges per vertex
+    -D INT          Upper bound on number of (colour 1) edges per vertex
+    -E INT          Upper bound on monochromatic triangles on colour 1 edges
+    -F INT          Upper bound on monochromatic triangles on colour 2 edges
+    -P              Include maximum p-clique free constraints
+    --deg-card TYPE Cardinality encoding type for degree constraints (sinz, totalizer, default: sinz)
+    --edge-lb INT   Lower bound on total number of edges
+    --edge-ub INT   Upper bound on total number of edges
+    --edge-card TYPE Cardinality encoding type for edge constraints (sinz, totalizer, default: sinz)
 " && exit
 
+# Add new variables for the new parameters
+deg_card_type="sinz"
+edge_card_type="sinz"
+edge_lb=0
+edge_ub=0
 
-while getopts "nsld:D:E:F:P" opt
-do
-    case $opt in
-        n) solve_mode="no_cubing" ;;
-        s) solve_mode="sin_cubing" ;;
-        l) solve_mode="mul_cubing" ;;
-        d) lower=${OPTARG} ;; #lower bound on degree of blue vertices
-        D) upper=${OPTARG} ;; #upper bound on degree of blue vertices
-        E) Edge_b=${OPTARG} ;; #upper bound on blue triangles per blue edge
-        F) Edge_r=${OPTARG} ;; #upper bound on red triangles per red edge
-        P) mpcf="MPCF" ;;
-        *) echo "Invalid option: -$OPTARG. Only -p and -m are supported. Use -h or --help for help" >&2
-           exit 1 ;;
+# Modify the getopts section to handle new parameters
+while [ $# -gt 0 ]; do
+    case "$1" in
+        -n) solve_mode="no_cubing" ;;
+        -s) solve_mode="sin_cubing" ;;
+        -l) solve_mode="mul_cubing" ;;
+        -d) lower="$2"; shift ;;
+        -D) upper="$2"; shift ;;
+        -E) Edge_b="$2"; shift ;;
+        -F) Edge_r="$2"; shift ;;
+        -P) mpcf="MPCF" ;;
+        --deg-card) deg_card_type="$2"; shift ;;
+        --edge-lb) edge_lb="$2"; shift ;;
+        --edge-ub) edge_ub="$2"; shift ;;
+        --edge-card) edge_card_type="$2"; shift ;;
+        -*) echo "Invalid option: $1" >&2; exit 1 ;;
+        *) break ;;
     esac
-    
+    shift
 done
-shift $((OPTIND-1))
 
-if [[ ! -v lower ]]; then
+if [ -z "${lower+x}" ]; then
     lower=0
 fi
-if [[ ! -v upper ]]; then
+if [ -z "${upper+x}" ]; then
     upper=0
 fi
 
-if [[ ! -v Edge_b ]]; then
+if [ -z "${Edge_b+x}" ]; then
     Edge_b=0
 fi
 
-if [[ ! -v Edge_r ]]; then
+if [ -z "${Edge_r+x}" ]; then
     Edge_r=0
 fi
 
-if [[ ! -v mpcf ]]; then
+if [ -z "${mpcf+x}" ]; then
     mpcf=0
 fi
 #step 1: input parameters
@@ -102,7 +128,7 @@ then
     cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
 else
     #echo $n $p $q $lower $upper $Edge_b $Edge_r
-    python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r ${mpcf} #generate the instance of order n for p,q
+    python3 gen_instance/generate.py $n $p $q $lower $upper $Edge_b $Edge_r $mpcf $deg_card_type $edge_card_type $edge_lb $edge_ub
     cp ${cnf} ${cnf}_${t}_${m}_${d}_${dv}_${nodes}
 fi
 
