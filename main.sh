@@ -98,9 +98,18 @@ nodes=${8:-1} #Number of nodes to submit to if using -l
 
 #step 2: setp up dependencies
 ./dependency-setup.sh
-di="${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}_${t}_${m}_${d}_${dv}_${nodes}_${solve_mode}"
-mkdir -p $di
 cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
+if [ "$lower" -gt 0 ] || [ "$upper" -gt 0 ]; then
+    cnf="${cnf}_deg${deg_card_type}"
+fi
+if [ "$edge_lb" -gt 0 ] || [ "$edge_ub" -gt 0 ]; then
+    cnf="${cnf}_edge${edge_card_type}_lb${edge_lb}_ub${edge_ub}"
+fi
+
+# Use same naming convention for directory
+di="${cnf}_${t}_${m}_${d}_${dv}_${nodes}_${solve_mode}"
+mkdir -p $di
+
 echo $di
 #step 3 and 4: generate pre-processed instance
 

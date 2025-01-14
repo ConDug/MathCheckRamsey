@@ -10,12 +10,22 @@ from min_pclique_free import max_pclique_free
 from b_b_card import generate_edge_clauses #totalizer
 #requires that the cnf file does not exist
 def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sinz", edge_card_type="sinz", edge_lb=0, edge_ub=0):
+    # Create base filename without temp suffix
+    base_filename = f"constraints_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}"
+    if lower > 0 or upper > 0:
+        base_filename += f"_deg{card_type}"
+    if edge_lb > 0 or edge_ub > 0:
+        base_filename += f"_edge{edge_card_type}_lb{edge_lb}_ub{edge_ub}"
 
-    vertices=range(1,n+1)
-    edge_dict={}
-    edge_counter=0
+    # Use consistent temp filename for all intermediate operations
+    temp_filename = f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}"
 
-    for j in range(1, n+1):             #generating the edge variables
+    vertices = range(1, n+1)
+    edge_dict = {}
+    edge_counter = 0
+
+    # Use temp_filename consistently for all intermediate writes
+    for j in range(1, n+1):
         for i in range(1, j):
             edge_counter += 1
             edge_dict[(i,j)] = edge_counter
@@ -24,14 +34,14 @@ def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sin
         constraint=""
         for j in itertools.combinations(clique,2):
             constraint+=str(-edge_dict[j])+" "
-        with open(f"./constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}", 'a') as f: #p-cliques
+        with open(temp_filename, 'a') as f:
             f.write(constraint + "0" + "\n")
 
     for clique in itertools.combinations(vertices,q):
         constraint=""
         for j in itertools.combinations(clique,2):
             constraint+=str(edge_dict[j])+" "
-        with open(f"./constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}", 'a') as f: #q-cliques
+        with open(temp_filename, 'a') as f: #q-cliques
            f.write(constraint + "0" + "\n")
 
 
@@ -82,9 +92,16 @@ def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sin
         count = edge_count
 
     count=str(count)
-    clause_count =str(clause_count+math.comb(n,p)+math.comb(n,q))
+    clause_count=str(clause_count+math.comb(n,p)+math.comb(n,q))
     print(str(u_e_r), str(MPCF), count, clause_count)
-    proc1=subprocess.Popen(["./gen_instance/combine.sh",str(n), str(p), str(q), str(lower), str(upper), str(u_e_b), str(u_e_r), str(MPCF), count, clause_count]) # call a bash file to combine cubic constraints and 1st line of cnf file
+    
+    # Pass both temp filename and final filename to combine.sh
+    proc1=subprocess.Popen([
+        "./gen_instance/combine.sh",
+        str(n), str(p), str(q), str(lower), str(upper), 
+        str(u_e_b), str(u_e_r), str(MPCF), count, clause_count,
+        temp_filename, base_filename
+    ])
     proc1.wait()
 
 
