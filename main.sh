@@ -143,16 +143,16 @@ case $solve_mode in
         ./solve-verify.sh $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp
         ;;
     "sin_cubing")
-    	 echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
+        echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
         ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
-	mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
+        mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
         echo "Cubing and solving in parallel on local machine"
         python3 parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv
         ;;
     "mul_cubing")
         echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
         ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
-	mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
+        mv ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}
         echo "Cubing and solving in parallel on Compute Canada"
         python parallel-solve.py $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $m $d $dv False
         found_files=()
@@ -160,11 +160,11 @@ case $solve_mode in
         # Populate the array with the names of files found by the find command
 
         while IFS= read -r -d $'\0' file; do
-        found_files+=("$file")
-	#old
-	#done < <(find "${di}" -mindepth 1 ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
-        #done < <(find "${di}" -mindepth 1 -regex ".*\.\(11.cnf\|12.cnf\|21.cnf\|22.cnf\)$" -print0)
-	done < <(find "${di}" -mindepth 1 -name "*.cnf" -print0)
+            found_files+=("$file")
+            #old
+            #done < <(find "${di}" -mindepth 1 ! -name '*.drat' ! -name '*.ext' ! -name '*.ext1' ! -name '*.simp1' ! -name '*.simplog' ! -name '*.cubes' -print0)
+            #done < <(find "${di}" -mindepth 1 -regex ".*\.\(11.cnf\|12.cnf\|21.cnf\|22.cnf\)$" -print0)
+        done < <(find "${di}" -mindepth 1 -name "*.cnf" -print0)
 
         # Calculate the number of files to distribute names across and initialize counters
         total_files=${#found_files[@]}
