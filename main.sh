@@ -40,10 +40,10 @@ Options:
     -E INT          Upper bound on monochromatic triangles on colour 1 edges
     -F INT          Upper bound on monochromatic triangles on colour 2 edges
     -P              Include maximum p-clique free constraints
-    --deg-card TYPE Cardinality encoding type for degree constraints (sinz, totalizer, default: sinz)
+    --deg-card TYPE Cardinality encoding type for degree constraints (sinz, totalizer, totalizerconcise default: sinz)
     --edge-lb INT   Lower bound on total number of edges
     --edge-ub INT   Upper bound on total number of edges
-    --edge-card TYPE Cardinality encoding type for edge constraints (sinz, totalizer, default: sinz)
+    --edge-card TYPE Cardinality encoding type for edge constraints (sinz, totalizer, totalizerconcise default: sinz)
 " && exit
 
 # Add new variables for the new parameters

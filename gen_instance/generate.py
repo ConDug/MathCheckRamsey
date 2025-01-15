@@ -50,9 +50,11 @@ def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sin
     if lower>0:
         for i in range(1,n+1):
             if card_type == "sinz":
-                deg_count, deg_clause = generate_degree_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-            else:  # totalizer
-                deg_count, deg_clause = generate_edge_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+                deg_count, deg_clause = generate_degree_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, temp_filename)
+            elif card_type in ["totalizer", "totalizerconcise"]:  # totalizer
+                deg_count, deg_clause = generate_edge_clauses([edge_dict[key] for key in edge_dict if i in key], lower, upper, count, temp_filename, card_type == "totalizer")
+            else:
+                print("Error: Invalid card_type")
             clause_count += deg_clause
             count = deg_count
 
@@ -85,9 +87,11 @@ def generate(n, p, q, lower=0, upper=0, u_e_b=0, u_e_r=0, mpcf=0, card_type="sin
     # Add edge cardinality constraints if bounds are specified
     if edge_lb > 0 or edge_ub > 0:
         if edge_card_type == "sinz":
-            edge_count, edge_clause = generate_degree_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
-        else:  # totalizer
-            edge_count, edge_clause = generate_edge_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, f"constraints_temp_{n}_{p}_{q}_{lower}_{upper}_{u_e_b}_{u_e_r}_{mpcf}")
+            edge_count, edge_clause = generate_degree_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, temp_filename)
+        elif edge_card_type in ["totalizer", "totalizerconcise"]:  # totalizer
+            edge_count, edge_clause = generate_edge_clauses(list(edge_dict.values()), edge_lb, edge_ub, count, temp_filename, edge_card_type == "totalizer")
+        else:
+            print("Error: Invalid edge_card_type")
         clause_count += edge_clause
         count = edge_count
 

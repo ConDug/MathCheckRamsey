@@ -20,7 +20,7 @@ def gen_implication_clause(a,b):
         #clause.append("0"+"\n")
         return(clause)
 
-def generate_edge_clauses(X, lower, upper, start_var, cnf_file):
+def generate_edge_clauses(X, lower, upper, start_var, cnf_file, strengthen=True):
     #print(X, start_var)
     start_var=start_var+len(X)+1#first len(X) vars will be used for root
     class Node():
@@ -106,8 +106,10 @@ def generate_edge_clauses(X, lower, upper, start_var, cnf_file):
                     for r in range(0,len(sigma)-1):
                         if a+b==r:
                             #print(a,b,r)
-                            clauses.append(gen_implication_clause({alpha[a],beta[b]},{sigma[r]}))
-                            clauses.append(gen_implication_clause({sigma[r+1]},{alpha[a+1],beta[b+1]}))
+                            if len(sigma)-2-r < len(X) - upper or strengthen:
+                                clauses.append(gen_implication_clause({alpha[a],beta[b]},{sigma[r]}))
+                            if r < lower or strengthen:
+                                clauses.append(gen_implication_clause({sigma[r+1]},{alpha[a+1],beta[b+1]}))
     clauses = [i for i in clauses if i is not None]
 
     for i in range(len(X)):
