@@ -50,6 +50,7 @@ Options:
     --edge-lb INT   Lower bound on total number of edges
     --edge-ub INT   Upper bound on total number of edges
     --edge-card TYPE Cardinality encoding type for edge constraints (sinz, totalizer, totalizerconcise default: sinz)
+    --strict-degree-bound  Use degree bounds calculated from known Ramsey numbers
 " && exit
 
 # Initialize variables
@@ -63,6 +64,7 @@ upper=0
 Edge_b=0
 Edge_r=0
 mpcf=""
+strict_degree_bound=""
 
 # Parse command line arguments
 while [ $# -gt 0 ]; do
@@ -79,11 +81,21 @@ while [ $# -gt 0 ]; do
         --edge-lb) edge_lb="$2"; shift ;;
         --edge-ub) edge_ub="$2"; shift ;;
         --edge-card) edge_card_type="$2"; shift ;;
+        --strict-degree-bound) 
+            strict_degree_bound="--strict-degree-bound"
+            ;;
         -*) echo "Invalid option: $1" >&2; exit 1 ;;
         *) break ;;
     esac
     shift
 done
+
+# Validate required arguments
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]
+then
+    echo "Need instance order (number of vertices) and p, q values. Use -h or --help for further instruction"
+    exit 1
+fi
 
 # Get positional arguments
 n=$1 #order
@@ -97,8 +109,12 @@ nodes=${8:-1}
 
 # Build the command with all options
 cmd="./main.sh ${t1}"
-[ -n "$lower" ] && cmd+=" -d $lower"
-[ -n "$upper" ] && cmd+=" -D $upper"
+if [ -n "$strict_degree_bound" ]; then
+    cmd+=" $strict_degree_bound"
+elif [ -n "$lower" ]; then
+    cmd+=" -d $lower"
+    [ -n "$upper" ] && cmd+=" -D $upper"
+fi
 [ -n "$Edge_b" ] && cmd+=" -E $Edge_b"
 [ -n "$Edge_r" ] && cmd+=" -F $Edge_r"
 [ -n "$mpcf" ] && cmd+=" $mpcf"

@@ -44,6 +44,7 @@ Options:
     --edge-lb INT   Lower bound on total number of edges
     --edge-ub INT   Upper bound on total number of edges
     --edge-card TYPE Cardinality encoding type for edge constraints (sinz, totalizer, totalizerconcise default: sinz)
+    --strict-degree-bound  Use degree bounds calculated from known Ramsey numbers
 " && exit
 
 # Add new variables for the new parameters
@@ -57,6 +58,7 @@ upper=0
 Edge_b=0
 Edge_r=0
 mpcf=0
+strict_degree_bound=0
 
 # Modify the getopts section to handle new parameters
 while [ $# -gt 0 ]; do
@@ -73,28 +75,43 @@ while [ $# -gt 0 ]; do
         --edge-lb) edge_lb="$2"; shift ;;
         --edge-ub) edge_ub="$2"; shift ;;
         --edge-card) edge_card_type="$2"; shift ;;
+        --strict-degree-bound) 
+            strict_degree_bound=1
+            ;;
         -*) echo "Invalid option: $1" >&2; exit 1 ;;
         *) break ;;
     esac
     shift
 done
 
-#step 1: input parameters
-if [ -z "$1" ]
+# After argument parsing, validate required arguments
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]
 then
-    echo "Need instance order (number of vertices) and number of simplification, use -h or --help for further instruction"
-    exit
+    echo "Need instance order (number of vertices) and p, q values. Use -h or --help for further instruction"
+    exit 1
 fi
 
 n=$1 #order
 p=$2
 q=$3
-t=${4:-100000} #conflicts for which to simplify each time CaDiCal is called, or % of variables to eliminate
-m=${5:-2} #Num of MCTS simulations. m=0 activate march
-d=${6:-v} #Cubing cutoff criteria, choose d(depth) as default #d, n, v
-dv=${7:-50} #By default cube to depth 5
-nodes=${8:-1} #Number of nodes to submit to if using -l
+t=${4:-100000}
+m=${5:-2}
+d=${6:-v}
+dv=${7:-50}
+nodes=${8:-1}
 
+# Calculate strict degree bounds if requested
+if [ "$strict_degree_bound" -eq 1 ]; then
+    bounds=$(python3 -c "from gen_instance.ramsey_bounds import calculate_strict_bounds; l,u = calculate_strict_bounds(int('$n'),int('$p'),int('$q')); print(f'{l} {u}')")
+    lower=$(echo $bounds | cut -d' ' -f1)
+    upper=$(echo $bounds | cut -d' ' -f2)
+fi
+
+# Validate numeric values
+if ! [[ "$lower" =~ ^[0-9]+$ ]] || ! [[ "$upper" =~ ^[0-9]+$ ]]; then
+    echo "Error: Degree bounds must be non-negative integers"
+    exit 1
+fi
 
 #step 2: setp up dependencies
 ./dependency-setup.sh
