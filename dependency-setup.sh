@@ -4,7 +4,7 @@
 function display_help() {
     echo "
     Description:
-        This script will install and compile all required dependencies and packages, including maplesat-ks, cadical, networkx, z3-solver, and march_cu from cube and conquer
+        This script will install and compile all required dependencies and packages, cadical, networkx, z3-solver, and march_cu from cube and conquer
 
     Usage:
         ./dependency-setup.sh 
@@ -66,16 +66,6 @@ else
     make
     cd -
 fi
-
-# Install maplesat-ks
-if [ -d maplesat-ks ] && [ -f maplesat-ks/simp/maplesat_static ]
-then
-    echo "Maplesat-ks installed and binary file compiled"
-else
-    cd maplesat-ks
-    make
-    cd -
-fi 
 
 # Update git submodules
 cd alpha-zero-general
