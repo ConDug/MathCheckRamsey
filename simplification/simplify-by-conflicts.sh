@@ -2,8 +2,6 @@
 
 s=false
 
-# Option parsing
-#if the s flag is enabled, DRAT file will still be generated but verification will be skipped
 while getopts ":s" opt; do
   case $opt in
     s) s=true ;;
@@ -16,7 +14,7 @@ shift $((OPTIND -1))
 # Ensure parameters are specified on the command-line
 if [ -z "$3" ]; then
   echo "Need filename, order, and the number of conflicts for which to simplify"
-  echo "if the s flag is enabled, DRAT file will still be generated but verification will be skipped"
+  echo "if the s flag is enabled, verification will be skipped"
   exit
 fi
 

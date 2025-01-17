@@ -69,6 +69,7 @@ def worker(queue):
         queue.task_done()
 
 def cube(original_file, cube, index, m, order, numMCTS, queue, cutoff='d', cutoffv=5, d=0, extension="False"):
+    # For cubing process - create and use simplified instance
     if cube != "N":
         command = f"./gen_cubes/apply.sh {original_file} {cube} {index} > {cube}{index}.cnf && ./simplification/simplify-by-conflicts.sh -s {cube}{index}.cnf {order} 10000"
         file_to_cube = f"{cube}{index}.cnf.simp"
@@ -99,20 +100,28 @@ def cube(original_file, cube, index, m, order, numMCTS, queue, cutoff='d', cutof
 
     print (f'{var_removed} variables removed from the cube')
 
-    if cutoff == 'd':
-        if d >= cutoffv:
-            if solveaftercubeg == 'True':
+    # When cutoff is reached, create and solve unsimplified instance
+    if (cutoff == 'd' and d >= cutoffv) or (cutoff == 'v' and var_removed >= cutoffv):
+        if solveaftercubeg == 'True':
+            # Create unsimplified instance with cube
+            if cube != "N":
+                unsimplified_file = f"{cube}{index}_final.cnf"
+                subprocess.run(f"./gen_cubes/apply.sh {original_file} {cube} {index} > {unsimplified_file}", shell=True)
+            else:
+                unsimplified_file = original_file
+
+            # Clean up simplified files as they're no longer needed
+            if cube != "N":
                 os.remove(f'{cube}{index}.cnf')
-                command = f"./solve-verify.sh {order} {file_to_cube}"
-                queue.put(command)
-            return
-    if cutoff == 'v':
-        if var_removed >= cutoffv:
-            if solveaftercubeg == 'True':
-                os.remove(f'{cube}{index}.cnf')
-                command = f"./solve-verify.sh {order} {file_to_cube}"
-                queue.put(command)
-            return
+            os.remove(file_to_cube)
+            os.remove(file_to_check)
+
+            # Solve the unsimplified instance
+            command = f"./solve-verify.sh {order} {unsimplified_file}"
+            queue.put(command)
+        return
+
+    # Continue cubing using simplified instance for guidance
     subprocess.run(f"python3 -u alpha-zero-general/main.py {file_to_cube} -d 1 -m {m} -o {file_to_cube}.temp -order {order} -prod -numMCTSSims {numMCTS}", shell=True)
     d += 1
     if cube != "N":
