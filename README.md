@@ -13,7 +13,7 @@ This repository contains a collection of scripts and tools for generating, solvi
 
 1. Clone the repository:
    ```
-   git clone https://github.com/ConDug/MathCheckRamsey.git
+   git clone [...].git
    cd MathCheckRamsey
    ```
 2. Run the dependency setup script:
