@@ -156,7 +156,7 @@ case $solve_mode in
         echo "Simplifying $f for t conflicts using CaDiCaL+CAS"
         ./simplification/simplify-by-conflicts.sh ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes} $n $t
 
-        echo "Solving $f using MapleSAT+CAS"
+        echo "Solving $f using CaDiCal+CAS"
         ./solve-verify.sh $n ${di}/${cnf}_${t}_${m}_${d}_${dv}_${nodes}.simp
         ;;
     "sin_cubing")
