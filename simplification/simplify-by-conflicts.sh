@@ -34,7 +34,7 @@ echo "simplifying for $m conflicts"
 
 # Check if "exit 20" is in the log
 if [ "$s" != "true" ]; then
-  ./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o "$f_dir".simp1 -e "$f_dir".ext -n -c $m --perm-out "$f_dir".perm | tee "$f_dir".simplog
+  ./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o "$f_dir".simp1 -e "$f_dir".ext -n -c $m --perm-out "$f_dir".perm --binary=false | tee "$f_dir".simplog
   echo "verifying the simplification now..."
   if grep -q "exit 20" "$f_dir".simplog; then
     echo "CaDiCaL returns UNSAT, using backward proof checking..."
