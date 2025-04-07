@@ -34,14 +34,16 @@ echo "simplifying for $m conflicts"
 
 # Check if "exit 20" is in the log
 if [ "$s" != "true" ]; then
-  ./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o "$f_dir".simp1 -e "$f_dir".ext -n -c $m | tee "$f_dir".simplog
+  ./cadical-ks/build/cadical-ks "$f_dir" "$f_dir.drat" --order $o -o "$f_dir".simp1 -e "$f_dir".ext -n -c $m --perm-out "$f_dir".perm | tee "$f_dir".simplog
   echo "verifying the simplification now..."
   if grep -q "exit 20" "$f_dir".simplog; then
     echo "CaDiCaL returns UNSAT, using backward proof checking..."
-    ./drat-trim/drat-trim "$f_dir" "$f_dir.drat" | tee "$f_dir".verify
+    ./proof-module.sh $o "$f_dir" "$f_dir".verify
+    #./drat-trim/drat-trim "$f_dir" "$f_dir.drat" | tee "$f_dir".verify
   else
     echo "CaDiCaL returns UNKNOWN, using forward proof checking..."
-    ./drat-trim/drat-trim "$f_dir" "$f_dir.drat" -f | tee "$f_dir".verify
+    ./proof-module.sh $o "$f_dir" "$f_dir".verify f
+    #./drat-trim/drat-trim "$f_dir" "$f_dir.drat" -f | tee "$f_dir".verify
   fi
 else
   echo "skipping generation of DRAT file"
