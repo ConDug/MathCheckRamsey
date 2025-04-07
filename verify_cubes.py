@@ -40,7 +40,7 @@ def enumerate_files(folder_name, filename):
     if not file1: #check .simplog
         with open(filename_1_simp, 'r') as file:
             content = file.read()
-            if "exit 21" in content:
+            if "exit 20" in content:
                 print(f"'exit 20' found in {filename_1_simp}")
                 file1 = True
     if not file1:
