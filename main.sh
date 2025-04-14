@@ -113,8 +113,14 @@ if ! [[ "$lower" =~ ^[0-9]+$ ]] || ! [[ "$upper" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
-#step 2: setp up dependencies
-./dependency-setup.sh
+#step 2: set up dependencies
+if [ "$solve_mode" == "no_cubing" ]
+then
+    ./dependency-setup.sh -n
+else
+    ./dependency-setup.sh
+fi
+
 cnf="constraints_${n}_${p}_${q}_${lower}_${upper}_${Edge_b}_${Edge_r}_${mpcf}"
 if [ "$lower" -gt 0 ] || [ "$upper" -gt 0 ]; then
     cnf="${cnf}_deg${deg_card_type}"
